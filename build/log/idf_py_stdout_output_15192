@@ -1,0 +1,208 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct  9 2024 18:40:55[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2bf34h (180020) map[0m
+[0;32mI (166) esp_image: segment 1: paddr=0003bf5c vaddr=3ffb0000 size=02504h (  9476) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0003e468 vaddr=40080000 size=01bb0h (  7088) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=45e60h (286304) map[0m
+[0;32mI (279) esp_image: segment 4: paddr=00085e88 vaddr=40081bb0 size=0d6cch ( 54988) load[0m
+[0;32mI (308) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (308) boot: Disabling RNG early entropy source...[0m
+[0;32mI (320) cpu_start: Multicore app[0m
+[0;32mI (328) cpu_start: Pro cpu start user code[0m
+[0;32mI (328) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (329) cpu_start: Application information:[0m
+[0;32mI (332) cpu_start: Project name:     wifi_station[0m
+[0;32mI (337) cpu_start: App version:      1[0m
+[0;32mI (341) cpu_start: Compile time:     Oct  9 2024 18:40:32[0m
+[0;32mI (347) cpu_start: ELF file SHA256:  d20a385ae...[0m
+[0;32mI (353) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (358) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (363) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (368) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (373) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (380) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (386) heap_init: At 3FFB3E08 len 0002C1F8 (176 KiB): DRAM[0m
+[0;32mI (392) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (398) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (405) heap_init: At 4008F27C len 00010D84 (67 KiB): IRAM[0m
+[0;32mI (412) spi_flash: detected chip: generic[0m
+[0;32mI (416) spi_flash: flash io: dio[0m
+[0;33mW (419) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (433) main_task: Started on CPU0[0m
+[0;32mI (443) main_task: Calling app_main()[0m
+[0;32mI (443) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (443) enc28j60: revision: 6[0m
+[0;32mI (463) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (463) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (463) eth_example: Ethernet Started[0m
+[0;32mI (2463) enc28j60: working in 10Mbps[0m
+[0;32mI (2463) enc28j60: working in half duplex[0m
+[0;32mI (2463) eth_example: Ethernet Link Up[0m
+[0;32mI (2463) eth_example: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2473) esp_netif_handlers: eth ip: 192.168.0.160, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2483) eth_example: Ethernet Got IP Address[0m
+[0;32mI (2483) eth_example: ~~~~~~~~~~~[0m
+[0;32mI (2493) eth_example: ETHIP:192.168.0.160[0m
+[0;32mI (2493) eth_example: ETHMASK:255.255.255.0[0m
+[0;32mI (2503) eth_example: ETHGW:192.168.0.1[0m
+[0;32mI (2503) eth_example: ~~~~~~~~~~~[0m
+Bang ARP Table: 3
+IP: 192.168.0.1, MAC: E4:FA:C4:27:55:D9
+IP: 192.168.0.99, MAC: 00:0C:29:ED:9C:F7
+IP: 192.168.0.101, MAC: 08:8F:C3:83:4A:A6
+[0;32mI (13023) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (14033) example: Starting server on port: '80'[0m
+[0;32mI (14033) example: Registering URI handlers[0m
+Tat task kepp
+[0;32mI (14033) main_task: Returned from app_main()[0m
+Honeypot
+DATA: {"numRows":1,"protocol1":"proto","IP11":"192.168.0.1","IP21":"192.168.0.101","switchState1":true}��?ʪ�?tr
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+[0;33mW (62013) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+DATA: {"protocol1":"proto","IP11":"192.168.0.1","IP21":"192.168.0.101","switchState1":true}��?���?���?
+[0;33mW (144713) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+Bat task kepp
+Goi ham kepp
+IP11: 192.168.0.1, MAC11: E4:FA:C4:27:55:D9
+IP21: 192.168.0.101, MAC21: 08:8F:C3:83:4A:A6
+DATA: {"switchState1":false,"IP21":"192.168.0.101","IP11":"192.168.0.1"}
+[0;33mW (147103) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+DATA: {"honeypotEnabled":false,"IP11":"192.168.0.1","IP21":"192.168.0.101","switchState1":false}�?���?`��?ƪ�?
+[0;33mW (171803) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+Bat task kepp
+Goi ham kepp
+DATA: {"IP11":"192.168.0.1","IP21":"192.168.0.101","switchState1":false}
+[0;33mW (173693) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+DATA: {"honeypotEnabled":true,"IP11":"192.168.0.1","IP21":"192.168.0.101","switchState1":false}��?���?
+[0;33mW (185323) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp
+Bat task kepp
+Goi ham kepp

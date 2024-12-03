@@ -1,0 +1,61 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM10 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM10 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40087713: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:138
+[0m
+[0;33m0x4008180a: panic_abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40086c61: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008dbad: abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/abort.c:38
+0x40087713: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:138
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40087713: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:138
+[0m
+[0;33m0x4008180a: panic_abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40086c61: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008dbad: abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/abort.c:38
+0x40087713: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:138
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40087713: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:138
+[0m
+[0;33m0x4008180a: panic_abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40086c61: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008dbad: abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/abort.c:38
+0x40087713: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:138
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40087713: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:138
+[0m
+[0;33m0x4008180a: panic_abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40086c61: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008dbad: abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/abort.c:38
+0x40087713: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:138
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40087713: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:138
+[0m
+[0;33m0x4008180a: panic_abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40086c61: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008dbad: abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/abort.c:38
+0x40087713: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:138
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40087713: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:138
+[0m
+[0;33m0x4008180a: panic_abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40086c61: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x4008dbad: abort at D:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/abort.c:38
+0x40087713: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:138
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

@@ -1,0 +1,115 @@
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 184, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 382, in from_csv
+    raise InputError("CSV flag column contains unknown flag '%s'" % (flag))
+gen_esp32part.InputError: CSV flag column contains unknown flag '# Giáº£m kĂ­ch thÆ°á»›c xuá»‘ng 1MB'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 363, in <module>
+    main()
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 186, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 2: CSV flag column contains unknown flag '# Giáº£m kĂ­ch thÆ°á»›c xuá»‘ng 1MB'
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 184, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 382, in from_csv
+    raise InputError("CSV flag column contains unknown flag '%s'" % (flag))
+gen_esp32part.InputError: CSV flag column contains unknown flag '# Giáº£m kĂ­ch thÆ°á»›c xuá»‘ng 1MB'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 363, in <module>
+    main()
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 186, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 2: CSV flag column contains unknown flag '# Giáº£m kĂ­ch thÆ°á»›c xuá»‘ng 1MB'
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 184, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 382, in from_csv
+    raise InputError("CSV flag column contains unknown flag '%s'" % (flag))
+gen_esp32part.InputError: CSV flag column contains unknown flag '# Giáº£m kĂ­ch thÆ°á»›c xuá»‘ng 1MB'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 363, in <module>
+    main()
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 186, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 2: CSV flag column contains unknown flag '# Giáº£m kĂ­ch thÆ°á»›c xuá»‘ng 1MB'
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 184, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 382, in from_csv
+    raise InputError("CSV flag column contains unknown flag '%s'" % (flag))
+gen_esp32part.InputError: CSV flag column contains unknown flag '# Giáº£m kĂ­ch thÆ°á»›c xuá»‘ng 1MB'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 363, in <module>
+    main()
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 186, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 2: CSV flag column contains unknown flag '# Giáº£m kĂ­ch thÆ°á»›c xuá»‘ng 1MB'
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 184, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 382, in from_csv
+    raise InputError("CSV flag column contains unknown flag '%s'" % (flag))
+gen_esp32part.InputError: CSV flag column contains unknown flag '# Giáº£m kĂ­ch thÆ°á»›c xuá»‘ng 1MB'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 363, in <module>
+    main()
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 186, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 2: CSV flag column contains unknown flag '# Giáº£m kĂ­ch thÆ°á»›c xuá»‘ng 1MB'
+Please check extra_partition_subtypes.inc file in build/config directory

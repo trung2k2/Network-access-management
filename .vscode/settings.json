@@ -1,0 +1,37 @@
+{
+    "C_Cpp.updateChannel": "Insiders",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "cmake.configureOnOpen": false,
+    "grunt.autoDetect": "on",
+    "terminal.explorerKind": "external",
+    "terminal.integrated.allowMnemonics": true,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [
+                "/k",
+                "D:/Espressif/idf_cmd_init.bat esp-idf-5277a2985e2cc957cd2c295fc673f50b",
+
+
+            ],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        }
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.associations": {
+        "input_iot.h": "c",
+        "output_iot.h": "c",
+        "http_server_iot.h": "c"
+    }
+}

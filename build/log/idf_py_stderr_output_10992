@@ -1,0 +1,1 @@
+ninja: error: 'D:/Espressif/frameworks/enc28j60/partitions.csv', needed by 'partition_table/partition-table.bin', missing and no known rule to make it

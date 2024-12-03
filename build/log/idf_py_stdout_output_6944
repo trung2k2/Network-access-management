@@ -1,0 +1,18 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Espressif/frameworks/enc28j60/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/8] Building C object esp-idf/setting_iot/CMakeFiles/__idf_setting_iot.dir/setting_iot.c.obj
+D:/Espressif/frameworks/enc28j60/common/setting_iot/setting_iot.c: In function 'task_init_set':
+D:/Espressif/frameworks/enc28j60/common/setting_iot/setting_iot.c:332:17: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  332 |     xTaskCreate(keepConnected_callback, "Check scan Task", 2048, NULL, 5, NULL);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+      |                 |
+      |                 void (*)(settings_t,  esp_netif_t *) {aka void (*)(settings_t,  struct esp_netif_obj *)}
+In file included from D:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/esp_additions/include/freertos/idf_additions.h:20,
+                 from D:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:1533,
+                 from D:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/include/esp_task.h:24,
+                 from D:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/include/lwipopts.h:20,
+                 from D:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/opt.h:51,
+                 from D:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include/lwip/netif.h:40,
+                 from D:/Espressif/frameworks/enc28j60/common/setting_iot/setting_iot.h:6,
+                 from D:/Espressif/frameworks/enc28j60/common/setting_iot/setting_iot.c:1:

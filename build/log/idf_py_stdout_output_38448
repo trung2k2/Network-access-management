@@ -1,0 +1,8 @@
+[1/12] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Espressif/frameworks/enc28j60/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/10] Building C object esp-idf/setting_iot/CMakeFiles/__idf_setting_iot.dir/setting_iot.c.obj
+D:/Espressif/frameworks/enc28j60/common/setting_iot/setting_iot.c: In function 'syslog_json2server':
+D:/Espressif/frameworks/enc28j60/common/setting_iot/setting_iot.c:344:16: warning: unused variable 'rowObject' [-Wunused-variable]
+  344 |         cJSON *rowObject = cJSON_CreateObject();
+      |                ^~~~~~~~~

@@ -1,0 +1,20 @@
+[1/14] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Espressif/frameworks/enc28j60/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/12] Building C object esp-idf/http_server_iot/CMakeFiles/__idf_http_server_iot.dir/http_server_iot.c.obj
+[3/12] Linking C static library esp-idf\http_server_iot\libhttp_server_iot.a
+[4/12] Linking C static library esp-idf\main\libmain.a
+[5/12] Generating ld/sections.ld
+[6/12] Generating anhmau2.jpeg.S
+[7/12] Generating index.html.S
+[8/12] Building ASM object CMakeFiles/wifi_station.elf.dir/anhmau2.jpeg.S.obj
+[9/12] Building ASM object CMakeFiles/wifi_station.elf.dir/index.html.S.obj
+[10/12] Linking CXX executable wifi_station.elf
+[11/12] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/Espressif/frameworks/enc28j60/build/wifi_station.bin
+[12/12] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Espressif/frameworks/enc28j60/build/partition_table/partition-table.bin D:/Espressif/frameworks/enc28j60/build/wifi_station.bin"
+wifi_station.bin binary size 0x81040 bytes. Smallest app partition is 0x100000 bytes. 0x7efc0 bytes (50%) free.

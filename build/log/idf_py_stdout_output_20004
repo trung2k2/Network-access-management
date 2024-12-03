@@ -1,0 +1,93 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 31 2024 15:45:53[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (77) boot:  1 storage          Unknown data     01 82 00210000 00100000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (89) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=123eb4h (1195700) map[0m
+[0;32mI (507) esp_image: segment 1: paddr=00133edc vaddr=3ffb0000 size=02594h (  9620) load[0m
+[0;32mI (511) esp_image: segment 2: paddr=00136478 vaddr=40080000 size=09ba0h ( 39840) load[0m
+[0;32mI (528) esp_image: segment 3: paddr=00140020 vaddr=400d0020 size=49300h (299776) map[0m
+[0;32mI (631) esp_image: segment 4: paddr=00189328 vaddr=40089ba0 size=05704h ( 22276) load[0m
+[0;32mI (648) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (648) boot: Disabling RNG early entropy source...[0m
+[0;32mI (660) cpu_start: Multicore app[0m
+[0;32mI (668) cpu_start: Pro cpu start user code[0m
+[0;32mI (668) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (669) cpu_start: Application information:[0m
+[0;32mI (672) cpu_start: Project name:     wifi_station[0m
+[0;32mI (677) cpu_start: App version:      1[0m
+[0;32mI (681) cpu_start: Compile time:     Oct 31 2024 15:44:45[0m
+[0;32mI (687) cpu_start: ELF file SHA256:  d1c9e12e3...[0m
+[0;32mI (693) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (698) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (703) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (708) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (713) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (720) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (726) heap_init: At 3FFB9280 len 00026D80 (155 KiB): DRAM[0m
+[0;32mI (732) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (738) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (745) heap_init: At 4008F2A4 len 00010D5C (67 KiB): IRAM[0m
+[0;32mI (752) spi_flash: detected chip: generic[0m
+[0;32mI (756) spi_flash: flash io: dio[0m
+[0;32mI (760) main_task: Started on CPU0[0m
+[0;32mI (770) main_task: Calling app_main()[0m
+[0;32mI (770) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (770) enc28j60: revision: 6[0m
+[0;32mI (790) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (790) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (790) eth_example: Ethernet Started[0m
+[0;32mI (2790) enc28j60: working in 10Mbps[0m
+[0;32mI (2790) enc28j60: working in half duplex[0m
+[0;32mI (2790) eth_example: Ethernet Link Up[0m
+[0;32mI (2790) eth_example: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2800) esp_netif_handlers: eth ip: 192.168.0.160, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2810) eth_example: Ethernet Got IP Address[0m
+[0;32mI (2810) eth_example: ~~~~~~~~~~~[0m
+[0;32mI (2820) eth_example: ETHIP:192.168.0.160[0m
+[0;32mI (2820) eth_example: ETHMASK:255.255.255.0[0m
+[0;32mI (2830) eth_example: ETHGW:192.168.0.1[0m
+[0;32mI (2830) eth_example: ~~~~~~~~~~~[0m
+Bang ARP Table: 4
+IP: 192.168.0.105, MAC: 08:8F:C3:83:4A:A6
+IP: 192.168.0.99, MAC: 00:0C:29:ED:9C:F7
+IP: 192.168.0.100, MAC: E4:FA:C4:27:55:D9
+IP: 192.168.0.150, MAC: C0:4A:00:EC:07:C2
+[0;32mI (10950) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (11960) SERVER: Starting server on port: '80'[0m
+[0;32mI (11960) SERVER: Registering URI handlers[0m
+Tat task kepp
+[0;32mI (11960) main_task: Returned from app_main()[0m
+[0;33mW (15040) httpd_parse: parse_block: request URI/header too long[0m
+[0;33mW (15040) httpd_txrx: httpd_resp_send_err: 431 Request Header Fields Too Large - Header fields are too long[0m
+[0;33mW (15940) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+1970-01-01 00:00:00 Initialize device
+1970-01-01 00:00:06 New device - IP: 192.168.0.105 MAC: 08:8F:C3:83:4A:A6
+1970-01-01 00:00:10 New device - IP: 192.168.0.99 MAC: 00:0C:29:ED:9C:F7
+1970-01-01 00:00:10 New device - IP: 192.168.0.100 MAC: E4:FA:C4:27:55:D9
+1970-01-01 00:00:10 New device - IP: 192.168.0.150 MAC: C0:4A:00:EC:07:C2
+1970-01-01 00:00:00 Initialize device
+1970-01-01 00:00:06 New device - IP: 192.168.0.105 MAC: 08:8F:C3:83:4A:A6
+1970-01-01 00:00:10 New device - IP: 192.168.0.99 MAC: 00:0C:29:ED:9C:F7
+1970-01-01 00:00:10 New device - IP: 192.168.0.100 MAC: E4:FA:C4:27:55:D9
+1970-01-01 00:00:10 New device - IP: 192.168.0.150 MAC: C0:4A:00:EC:07:C2

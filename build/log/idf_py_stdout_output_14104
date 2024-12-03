@@ -1,0 +1,64 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Espressif/frameworks/enc28j60/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/8] Building C object esp-idf/arp_iot/CMakeFiles/__idf_arp_iot.dir/arp_iot.c.obj
+[3/8] Linking C static library esp-idf\arp_iot\libarp_iot.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable wifi_station.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/Espressif/frameworks/enc28j60/build/wifi_station.bin
+[7/8] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Espressif/frameworks/enc28j60/build/partition_table/partition-table.bin D:/Espressif/frameworks/enc28j60/build/wifi_station.bin"
+wifi_station.bin binary size 0x81050 bytes. Smallest app partition is 0x100000 bytes. 0x7efb0 bytes (50%) free.
+[7/8] cmd.exe /C "cd /D D:\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && D:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDesptool.py --chip esp32 -p COM10 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 wifi_station.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM10
+Connecting.......
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: fc:e8:c0:74:4e:70
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00091fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16349...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16349 compressed) at 0x00001000 in 0.8 seconds (effective 259.1 kbit/s)...
+Hash of data verified.
+Compressed 528464 bytes to 275168...
+Writing at 0x00010000... (5 %)
+Writing at 0x00014769... (11 %)
+Writing at 0x000274ab... (17 %)
+Writing at 0x00035eb4... (23 %)
+Writing at 0x0003f29c... (29 %)
+Writing at 0x00044fbf... (35 %)
+Writing at 0x0004ae05... (41 %)
+Writing at 0x00050db1... (47 %)
+Writing at 0x000563c2... (52 %)
+Writing at 0x0005bfd8... (58 %)
+Writing at 0x00061dc4... (64 %)
+Writing at 0x000677a6... (70 %)
+Writing at 0x0006dbbd... (76 %)
+Writing at 0x00073b90... (82 %)
+Writing at 0x0007dadd... (88 %)
+Writing at 0x00085bd4... (94 %)
+Writing at 0x0008beee... (100 %)
+Wrote 528464 bytes (275168 compressed) at 0x00010000 in 7.4 seconds (effective 574.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 496.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+F_PATH=D:/Espressif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=D:/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;D:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/Espressif/frameworks/enc28j60/build -P D:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_serial_tool.cmake"

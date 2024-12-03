@@ -1,0 +1,742 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct  9 2024 18:40:55[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23454h (144468) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=0003347c vaddr=3ffb0000 size=023b4h (  9140) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=00035838 vaddr=40080000 size=0a7e0h ( 42976) load[0m
+[0;32mI (177) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=44330h (279344) map[0m
+[0;32mI (273) esp_image: segment 4: paddr=00084358 vaddr=4008a7e0 size=0495ch ( 18780) load[0m
+[0;32mI (288) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (288) boot: Disabling RNG early entropy source...[0m
+[0;32mI (300) cpu_start: Multicore app[0m
+[0;32mI (308) cpu_start: Pro cpu start user code[0m
+[0;32mI (308) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (308) cpu_start: Application information:[0m
+[0;32mI (311) cpu_start: Project name:     wifi_station[0m
+[0;32mI (317) cpu_start: App version:      1[0m
+[0;32mI (321) cpu_start: Compile time:     Oct  9 2024 18:40:32[0m
+[0;32mI (327) cpu_start: ELF file SHA256:  ded2fcd7a...[0m
+[0;32mI (333) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (338) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (343) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (348) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (353) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (360) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (366) heap_init: At 3FFB3950 len 0002C6B0 (177 KiB): DRAM[0m
+[0;32mI (372) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (378) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (385) heap_init: At 4008F13C len 00010EC4 (67 KiB): IRAM[0m
+[0;32mI (392) spi_flash: detected chip: generic[0m
+[0;32mI (395) spi_flash: flash io: dio[0m
+[0;33mW (399) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (413) main_task: Started on CPU0[0m
+[0;32mI (423) main_task: Calling app_main()[0m
+[0;32mI (423) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (423) enc28j60: revision: 6[0m
+[0;32mI (443) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (443) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (443) eth_example: Ethernet Started[0m
+[0;32mI (2443) enc28j60: working in 10Mbps[0m
+[0;32mI (2443) enc28j60: working in half duplex[0m
+[0;32mI (2443) eth_example: Ethernet Link Up[0m
+[0;32mI (2443) eth_example: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2453) esp_netif_handlers: eth ip: 192.168.0.160, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2463) eth_example: Ethernet Got IP Address[0m
+[0;32mI (2463) eth_example: ~~~~~~~~~~~[0m
+[0;32mI (2473) eth_example: ETHIP:192.168.0.160[0m
+[0;32mI (2473) eth_example: ETHMASK:255.255.255.0[0m
+[0;32mI (2483) eth_example: ETHGW:192.168.0.1[0m
+[0;32mI (2483) eth_example: ~~~~~~~~~~~[0m
+Bang ARP Table: 2
+IP: 192.168.0.1, MAC: C0:4A:00:EC:07:C2
+IP: 192.168.0.101, MAC: 08:8F:C3:83:4A:A6
+[0;32mI (13003) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (13003) example: Starting server on port: '80'[0m
+[0;32mI (13013) example: Registering URI handlers[0m
+[0;32mI (14013) main_task: Returned from app_main()[0m
+[0;31mE (30493) enc28j60: enc28j60_switch_register_bank(362): clear ECON1[1:0] failed[0m
+[0;31mE (30493) enc28j60: enc28j60_register_read(400): switch bank failed[0m
+[0;31mE (30493) enc28j60: emac_enc28j60_read_phy_reg(479): read MISTAT failed[0m
+[0;31mE (30503) enc28j60: enc28j60_update_link_duplex_speed(102): read PHSTAT2 failed[0m
+[0;31mE (30503) enc28j60: enc28j60_get_link(142): update link duplex speed failed[0m
+[0;31mE (32233) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32233) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32233) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32243) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32253) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32263) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32263) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32273) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32283) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32293) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32293) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32303) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32313) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32323) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32323) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32333) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32343) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32343) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32353) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32363) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32373) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32373) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32383) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32393) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32403) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32403) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32413) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32423) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32423) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32433) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32443) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32453) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32453) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32463) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32473) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32473) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32483) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32493) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32503) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32503) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32513) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32523) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32533) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32533) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32543) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32553) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32563) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32563) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32573) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32583) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32583) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32593) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32603) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32613) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32613) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32623) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32633) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32643) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32643) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32653) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32663) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32673) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32673) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32683) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32693) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32693) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32703) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32713) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32723) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32723) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32733) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32743) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32753) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32753) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32763) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32773) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32773) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32783) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32793) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32803) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32803) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32813) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32823) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32823) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32833) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32843) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32853) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32853) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32863) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32873) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32883) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32883) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32893) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32903) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32913) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32913) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32923) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32933) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32933) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32943) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32953) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32963) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32963) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (32973) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (32983) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (32993) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (32993) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33003) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33013) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33023) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33023) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33033) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33043) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33043) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33053) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33063) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33073) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33073) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33083) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33093) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33103) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33103) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33113) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33123) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33123) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33133) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33143) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33153) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33153) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33163) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33173) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33173) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33183) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33193) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33203) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33203) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33213) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33223) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33233) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33233) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33243) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33253) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33263) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33263) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33273) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33283) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33283) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33293) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33303) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33313) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33313) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33323) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33333) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33343) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33343) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33353) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33363) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33373) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33373) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33383) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33393) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33393) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33403) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33413) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33423) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33423) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33433) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33443) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33453) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33453) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33463) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33473) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33473) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33483) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33493) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33503) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33503) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33513) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33523) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33523) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33533) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33543) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33553) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33553) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33563) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33573) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33583) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33583) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33593) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33603) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33613) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33613) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33623) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33633) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33633) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33643) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33653) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33663) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33663) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33673) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33683) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33693) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33693) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33703) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33713) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33713) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33723) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33733) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33743) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33743) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33753) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33763) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33773) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33773) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33783) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33793) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33803) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33803) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33813) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33823) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33823) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33833) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33843) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33853) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33853) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33863) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33873) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33873) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33883) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33893) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33903) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33903) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33913) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33923) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33933) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33933) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33943) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33953) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33963) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33963) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (33973) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (33983) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (33983) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (33993) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34003) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34013) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34013) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34023) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34033) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34043) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34043) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34053) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34063) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34063) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34073) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34083) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34093) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34093) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34103) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34113) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34123) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34123) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34133) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34143) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34153) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34153) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34163) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34173) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34173) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34183) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34193) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34203) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34203) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34213) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34223) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34223) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34233) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34243) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34253) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34253) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34263) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34273) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34283) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34283) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34293) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34303) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34313) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34313) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34323) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34333) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34333) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34343) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34353) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34363) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34363) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34373) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34383) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34393) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34393) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34403) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34413) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34413) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34423) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34433) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34443) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34443) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34453) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34463) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34473) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34473) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34483) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34493) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34503) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34503) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34513) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34523) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34523) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34533) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34543) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34553) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34553) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34563) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34573) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34573) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34583) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34593) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34603) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34603) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34613) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34623) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34633) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34633) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34643) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34653) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34663) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34663) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34673) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34683) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34683) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34693) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34703) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34713) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34713) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34723) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34733) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34743) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34743) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34753) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34763) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34763) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34773) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34783) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34793) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34793) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34803) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34813) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34823) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34823) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34833) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34843) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34853) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34853) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34863) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34873) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34873) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34883) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34893) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34903) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34903) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34913) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34923) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34923) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34933) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34943) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34953) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34953) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34963) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (34973) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (34983) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (34983) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (34993) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35003) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35013) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35013) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35023) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35033) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35033) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35043) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35053) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35063) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35063) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35073) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35083) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35093) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35093) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35103) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35113) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35113) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35123) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE[0;31mE (35133) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (35133) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (35133) task_wdt: Tasks currently running:[0m
+[0;31mE (35133) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (35133) task_wdt: CPU 1: enc28j60_tsk[0m
+[0;31mE (35133) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085512:0x3FFB1500 0x40083295:0x3FFB1520 0x400D7035:0x3FFB9700 0x400D77F7:0x3FFB9730 0x400D665F:0x3FFB9750 0x400D5D8E:0x3FFB9770 0x4000BD83:0x3FFB9790 0x4000117D:0x3FFB97B0 0x400592FE:0x3FFB97D0 0x4005937A:0x3FFB97F0 0x400FEF3D:0x3FFB9810 0x4010B90B:0x3FFB9840 0x4010B2CE:0x3FFB9860 0x400FF2CD:0x3FFB9B80 0x401142C5:0x3FFB9BB0 0x4008D921:0x3FFB9BE0 0x400D8F3D:0x3FFB9C30 0x400D8C9D:0x3FFB9C70 0x400876D9:0x3FFB9CB0
+
+ (35133) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35213) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35213) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35223) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35233) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35243) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35243) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35253) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35263) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35273) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35273) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35283) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35293) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35303) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35303) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35313) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35323) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35323) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35333) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35343) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35353) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35353) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35363) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35373) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35373) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35383) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35393) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35403) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35403) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35413) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35423) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35433) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35433) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35443) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35453) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35463) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35463) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35473) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35483) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35483) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35493) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35503) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35513) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35513) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35523) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35533) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35543) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35543) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35553) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35563) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35563) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35573) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35583) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35593) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35593) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35603) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35613) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35623) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35623) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35633) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35643) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35653) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35653) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35663) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35673) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35673) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35683) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35693) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35703) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35703) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35713) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35723) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35723) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35733) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35743) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35753) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35753) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35763) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35773) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35783) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35783) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35793) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35803) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35813) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35813) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35823) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35833) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35833) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35843) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35853) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35863) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35863) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35873) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35883) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35893) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35893) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35903) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35913) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35913) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35923) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35933) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35943) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35943) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35953) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35963) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (35973) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (35973) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (35983) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (35993) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36003) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36003) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36013) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36023) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36023) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36033) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36043) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36053) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36053) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36063) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36073) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36073) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36083) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36093) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36103) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36103) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36113) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36123) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36133) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36133) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36143) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36153) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36163) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36163) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36173) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36183) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36183) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36193) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36203) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36213) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36213) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36223) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36233) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36243) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36243) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36253) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36263) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36263) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36273) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36283) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36293) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36293) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36303) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36313) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36323) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36323) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36333) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36343) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36353) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36353) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36363) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36373) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36373) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36383) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36393) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36403) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36403) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36413) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36423) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36423) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36433) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36443) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36453) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36453) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36463) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36473) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36483) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36483) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36493) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36503) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36513) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36513) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36523) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36533) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36533) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36543) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36553) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36563) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36563) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36573) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36583) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36593) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36593) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36603) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36613) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36613) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36623) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36633) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36643) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36643) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36653) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36663) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36673) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36673) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36683) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36693) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36703) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36703) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36713) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36723) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36723) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36733) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36743) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36753) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36753) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36763) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36773) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36773) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36783) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36793) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36803) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36803) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36813) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36823) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36833) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36833) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36843) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36853) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36863) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36863) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36873) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36883) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36883) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36893) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36903) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36913) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36913) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36923) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36933) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36943) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36943) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36953) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36963) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36963) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (36973) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (36983) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m
+[0;31mE (36993) spi_master: check_trans_valid(802): txdata transfer > host maximum[0m
+[0;31mE (36993) enc28j60: enc28j60_do_memory_read(319): spi transmit failed[0m
+[0;31mE (37003) enc28j60: enc28j60_read_packet(424): read memory failed[0m
+[0;31mE (37013) enc28j60: emac_enc28j60_receive(962): read packet content failed[0m

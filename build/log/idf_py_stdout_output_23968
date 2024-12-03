@@ -1,0 +1,73 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct  9 2024 18:40:55[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=233d4h (144340) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=000333fc vaddr=3ffb0000 size=023b4h (  9140) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=000357b8 vaddr=40080000 size=0a860h ( 43104) load[0m
+[0;32mI (177) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=43428h (275496) map[0m
+[0;32mI (272) esp_image: segment 4: paddr=00083450 vaddr=4008a860 size=048dch ( 18652) load[0m
+[0;32mI (287) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (287) boot: Disabling RNG early entropy source...[0m
+[0;32mI (298) cpu_start: Multicore app[0m
+[0;32mI (307) cpu_start: Pro cpu start user code[0m
+[0;32mI (307) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (307) cpu_start: Application information:[0m
+[0;32mI (310) cpu_start: Project name:     wifi_station[0m
+[0;32mI (315) cpu_start: App version:      1[0m
+[0;32mI (320) cpu_start: Compile time:     Oct  9 2024 18:40:32[0m
+[0;32mI (326) cpu_start: ELF file SHA256:  51a57e5ee...[0m
+[0;32mI (331) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (337) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (341) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (346) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (351) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (358) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (364) heap_init: At 3FFB3940 len 0002C6C0 (177 KiB): DRAM[0m
+[0;32mI (370) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (377) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (383) heap_init: At 4008F13C len 00010EC4 (67 KiB): IRAM[0m
+[0;32mI (391) spi_flash: detected chip: generic[0m
+[0;32mI (394) spi_flash: flash io: dio[0m
+[0;33mW (398) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (412) main_task: Started on CPU0[0m
+[0;32mI (422) main_task: Calling app_main()[0m
+[0;32mI (422) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (422) enc28j60: revision: 6[0m
+[0;32mI (442) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (442) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (442) eth_example: Ethernet Started[0m
+[0;32mI (2442) enc28j60: working in 10Mbps[0m
+[0;32mI (2442) enc28j60: working in half duplex[0m
+[0;32mI (2442) eth_example: Ethernet Link Up[0m
+[0;32mI (2442) eth_example: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (4442) esp_netif_handlers: eth ip: 192.168.0.150, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (4442) eth_example: Ethernet Got IP Address[0m
+[0;32mI (4442) eth_example: ~~~~~~~~~~~[0m
+[0;32mI (4442) eth_example: ETHIP:192.168.0.150[0m
+[0;32mI (4452) eth_example: ETHMASK:255.255.255.0[0m
+[0;32mI (4452) eth_example: ETHGW:192.168.0.1[0m
+[0;32mI (4462) eth_example: ~~~~~~~~~~~[0m
+[0;33mW (30442) enc28j60: tx_ready_sem expired[0m

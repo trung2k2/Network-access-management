@@ -1,0 +1,20 @@
+[1/10] Generating index4.html.S
+[2/10] Generating index5.html.S
+[3/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Espressif/frameworks/enc28j60/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[4/8] Building ASM object CMakeFiles/wifi_station.elf.dir/index4.html.S.obj
+[5/8] Building ASM object CMakeFiles/wifi_station.elf.dir/index5.html.S.obj
+[6/8] Linking CXX executable wifi_station.elf
+[7/8] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/Espressif/frameworks/enc28j60/build/wifi_station.bin
+[8/8] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Espressif/frameworks/enc28j60/build/partition_table/partition-table.bin D:/Espressif/frameworks/enc28j60/build/wifi_station.bin"
+FAILED: esp-idf/esptool_py/CMakeFiles/app_check_size D:/Espressif/frameworks/enc28j60/build/esp-idf/esptool_py/CMakeFiles/app_check_size 
+cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Espressif/frameworks/enc28j60/build/partition_table/partition-table.bin D:/Espressif/frameworks/enc28j60/build/wifi_station.bin"
+Error: app partition is too small for binary wifi_station.bin size 0x17e9e0:
+  - Part 'factory' 0/0 @ 0x10000 size 0x100000 (overflow 0x7e9e0)
+ninja: build stopped: subcommand failed.

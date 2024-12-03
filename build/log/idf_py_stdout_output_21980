@@ -1,0 +1,46 @@
+[1/40] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/api/tcpip.c.obj
+[2/40] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/init.c.obj
+[3/40] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/memp.c.obj
+[4/40] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Espressif/frameworks/enc28j60/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[5/38] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/netif.c.obj
+[6/38] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/timeouts.c.obj
+[7/38] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4/dhcp.c.obj
+[8/38] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4/etharp.c.obj
+[9/38] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ethernet.c.obj
+[10/38] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/bridgeif.c.obj
+[11/38] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/apps/dhcpserver/dhcpserver.c.obj
+[12/38] Building C object esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/lwip/netif/wlanif.c.obj
+[13/38] Building C object esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/lwip/netif/ethernetif.c.obj
+[14/38] Building C object esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/lwip/esp_netif_lwip.c.obj
+[15/38] Linking C static library esp-idf\esp_netif\libesp_netif.a
+[16/38] Linking C static library esp-idf\lwip\liblwip.a
+[17/38] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+[18/38] Building C object esp-idf/arp_iot/CMakeFiles/__idf_arp_iot.dir/arp_iot.c.obj
+[19/38] Building C object esp-idf/setting_iot/CMakeFiles/__idf_setting_iot.dir/setting_iot.c.obj
+[20/38] Building C object esp-idf/http_server_iot/CMakeFiles/__idf_http_server_iot.dir/http_server_iot.c.obj
+[21/38] Linking C static library esp-idf\setting_iot\libsetting_iot.a
+[22/38] Linking C static library esp-idf\http_server_iot\libhttp_server_iot.a
+[23/38] Linking C static library esp-idf\arp_iot\libarp_iot.a
+[24/38] Linking C static library esp-idf\main\libmain.a
+[25/38] Generating ld/sections.ld
+[26/38] Generating index2.html.S
+[27/38] Generating index.html.S
+[28/38] Generating index3.html.S
+[29/38] Generating index4.html.S
+[30/38] Generating index5.html.S
+[31/38] Building ASM object CMakeFiles/wifi_station.elf.dir/index2.html.S.obj
+[32/38] Building ASM object CMakeFiles/wifi_station.elf.dir/index.html.S.obj
+[33/38] Building ASM object CMakeFiles/wifi_station.elf.dir/index3.html.S.obj
+[34/38] Building ASM object CMakeFiles/wifi_station.elf.dir/index4.html.S.obj
+[35/38] Building ASM object CMakeFiles/wifi_station.elf.dir/index5.html.S.obj
+[36/38] Linking CXX executable wifi_station.elf
+[37/38] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/Espressif/frameworks/enc28j60/build/wifi_station.bin
+[38/38] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Espressif/frameworks/enc28j60/build/partition_table/partition-table.bin D:/Espressif/frameworks/enc28j60/build/wifi_station.bin"
+wifi_station.bin binary size 0x9a780 bytes. Smallest app partition is 0x100000 bytes. 0x65880 bytes (40%) free.

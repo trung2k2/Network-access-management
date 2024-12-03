@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 10%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+.container:last-child {
+    margin-top: 20px; /* Tạo khoảng cách giữa phần "Return to sign in?" và container cuối */
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.psw {
+    display: block;
+    margin-bottom: 10px; /* Điều chỉnh giá trị nếu cần thêm khoảng cách */
+}
+
+.psw a {
+            text-decoration: underline; /* Gạch chân */
+            color: blue;
+            cursor: pointer; /* Thay đổi con trỏ thành bàn tay */
+            width: auto;
+            padding: 20px 18px;
+        }
+
+.psw a:hover {
+    color: darkblue; /* Đổi màu khi hover */
+}
+
+/* The Modal (background) */
+.modal {
+  display: block; /* Hiển thị modal ngay khi tải trang */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+.content {
+  text-align: center;
+}
+    body {  margin: 0;}
+    .topnav {
+            display: flex; /* Sử dụng Flexbox */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            justify-content: center; /* Căn giữa chữ trong thanh điều hướng */
+            background-color: #2f4468;
+            color: white;
+            font-size: 1.7rem;
+            padding: 5px; /* Thêm khoảng cách bên trong */
+            height: 80px;
+            max-height: 75px;
+        }
+
+        .topnav img {
+          position: absolute; /* Đặt ảnh bên trái */
+      left: 5px; /* Khoảng cách từ trái */
+      top: 43px; /* Căn giữa theo chiều dọc */
+      transform: translateY(-50%); /* Điều chỉnh vị trí để căn giữa theo chiều dọc */
+        }
+        .topnav h3 {
+          margin: 0 auto; /* Loại bỏ khoảng cách thừa */
+      }
+
+      /* Thêm ảnh vào trang */
+      .image-container {
+            text-align: left;
+            
+        }
+
+        .image-container img {
+            width: 6px;
+            height: auto;
+            
+        }
+</style>
+</head>
+<body>
+  <div class="topnav">
+    <img src="/anh1" alt="Device Image"> <!-- Đường dẫn đến hình ảnh -->
+    <div class="spacer"></div> <!-- Spacer giúp đẩy tiêu đề vào giữa -->
+    <h3>WSR DEFENDER</h3> <!-- Căn giữa tiêu đề -->
+    <div class="spacer"></div> <!-- Spacer giúp căn giữa chính xác -->
+  </div>
+
+<div id="popup" class="modal" style="display:none;">
+  <form class="modal-content animate" onsubmit="return validateJoin()" method="post">
+    <div class="imgcontainer">
+      <img src="/anh1" alt="Device Image" class="avatar">
+    </div>
+    <div class="container" style="text-align: center; font-size: 20px;">
+      <label class="warning-text"><b>Enter code to join this network</b></label>
+    </div>
+
+    <div class="container">
+      <label for="code"><b>Code for guest</b></label>
+      <input type="text" placeholder="Enter your code" id="code" name="code" required>
+
+      <button type="submit">Join</button>
+      <span class="psw"><a onclick="closePopup()" style="margin-bottom: 10px;">Return to sign in?</a></span>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1;"></div>
+  </form>
+</div>
+
+<div id="id01" class="modal">
+  <form class="modal-content animate" onsubmit="return validateLogin()" method="post">
+    <div class="imgcontainer">
+      <img src="/anh1" alt="Device Image" class="avatar">
+    </div>
+
+    <div class="container" style="text-align: center; font-size: 20px;">
+      <label class="warning-text"><b>Sign in to WSR Defender</b></label>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="uname" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="psw" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+      <span class="psw"><a onclick="openPopup()">Have a join code?</a></span>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1; margin: 0 auto;"></div>
+  </form>
+</div>
+
+<script>
+function validateLogin() {
+    // Lấy thông tin người dùng nhập
+    var enteredUsername = document.getElementById("uname").value;
+    var enteredPassword = document.getElementById("psw").value;
+
+    // Gửi yêu cầu POST đến server
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "/login", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.onload = function () {
+        
+            var response = JSON.parse(this.responseText);
+            if (response.success && response.role == "admin") {
+                // Chuyển hướng đến trang /trangchu nếu đúng
+                window.location.href = "/trangchu";
+            } 
+            else if (response.success && response.role == "consultant") {
+                // Chuyển hướng đến trang /trangchu nếu đúng
+                window.location.href = "/trangchuconsultant";
+            }
+            else {
+                // Thông báo lỗi nếu sai
+                alert("Password or username is incorrect!");
+            }
+        
+    };
+    xhttp.send("username=" + encodeURIComponent(enteredUsername) + "&password=" + encodeURIComponent(enteredPassword));
+    return false; // Ngăn không cho form gửi đi theo cách thông thường
+}
+
+function validateJoin() {
+    // Lấy thông tin người dùng nhập
+    var enteredCode = document.getElementById("code").value;
+
+
+    // Gửi yêu cầu POST đến server
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "/login", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.onload = function () {
+        
+            var response = JSON.parse(this.responseText);
+            if (response.success && response.role == "guest") {
+               // Thông báo lỗi nếu đúng
+                alert("Successfully joined the network!");
+            } 
+            else {
+                // Thông báo lỗi nếu sai
+                alert("Incorrect code entered!");
+            }
+        
+    };
+    xhttp.send("code=" + encodeURIComponent(enteredCode));
+    return false; // Ngăn không cho form gửi đi theo cách thông thường
+}
+
+    function openPopup() {
+        // Ẩn nội dung chính
+        document.getElementById('id01').style.display = 'none';
+        // Hiện popup
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+        // Hiện lại nội dung chính
+        document.getElementById('id01').style.display = 'block';
+        // Ẩn popup
+        document.getElementById('popup').style.display = 'none';
+    }
+
+
+</script>
+
+</body>
+</html>

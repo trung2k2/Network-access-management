@@ -1,0 +1,60 @@
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 363, in <module>
+    main()
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 201, in from_csv
+    raise InputError('CSV Error at line %d: Partitions overlap. Partition sets offset 0x%x. Previous partition ends 0x%x'
+gen_esp32part.InputError: CSV Error at line 3: Partitions overlap. Partition sets offset 0x110000. Previous partition ends 0x210000
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 363, in <module>
+    main()
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 201, in from_csv
+    raise InputError('CSV Error at line %d: Partitions overlap. Partition sets offset 0x%x. Previous partition ends 0x%x'
+gen_esp32part.InputError: CSV Error at line 3: Partitions overlap. Partition sets offset 0x110000. Previous partition ends 0x210000
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 363, in <module>
+    main()
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 201, in from_csv
+    raise InputError('CSV Error at line %d: Partitions overlap. Partition sets offset 0x%x. Previous partition ends 0x%x'
+gen_esp32part.InputError: CSV Error at line 3: Partitions overlap. Partition sets offset 0x110000. Previous partition ends 0x210000
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 363, in <module>
+    main()
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 201, in from_csv
+    raise InputError('CSV Error at line %d: Partitions overlap. Partition sets offset 0x%x. Previous partition ends 0x%x'
+gen_esp32part.InputError: CSV Error at line 3: Partitions overlap. Partition sets offset 0x110000. Previous partition ends 0x210000
+Traceback (most recent call last):
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 363, in <module>
+    main()
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Espressif\frameworks\esp-idf-v5.2.2\components\partition_table\gen_esp32part.py", line 201, in from_csv
+    raise InputError('CSV Error at line %d: Partitions overlap. Partition sets offset 0x%x. Previous partition ends 0x%x'
+gen_esp32part.InputError: CSV Error at line 3: Partitions overlap. Partition sets offset 0x110000. Previous partition ends 0x210000

@@ -1,0 +1,698 @@
+<!DOCTYPE HTML><html></html>
+<head>
+  <title>System Log</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/all_css" crossorigin="anonymous">
+  <link rel="icon" href="data:,">
+  <script src="/jspdf_umd_min"></script>
+  <script src="/jspdf_plugin_autotable_min"></script>
+  <style>
+      .content-wrapper {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;     
+          min-height: 70vh;       
+        }
+        .content-wrapper h4 {
+            text-align: left; /* Căn trái cho các nút */
+            margin-left: 18%; /* Thêm khoảng cách bên trái */
+            font-size: 1.5rem; /* Tăng kích thước chữ */
+            margin-top: 5px; /* Xóa khoảng cách mặc định */
+            margin-bottom: 0px;
+        }
+     .table_component {
+            overflow: auto;
+            width: 60%;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .table_component table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            background-color: transparent;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .table_component caption {
+            caption-side: top;
+            text-align: left;
+            
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .table_component th, .table_component td {
+            border: 1px solid #dededf;
+            padding: 10px;
+            text-align: left;
+            font-size: 0.9em; /* Giảm cỡ chữ */
+            word-wrap: break-word; /* Chữ dài quá sẽ xuống dòng */
+            padding-left: 20px; /* Thêm thụt lề cho nội dung */
+        }
+
+        
+        .table_component tbody tr:nth-child(odd) {
+            background-color: #f0f8ff; /* Màu nền cho dòng lẻ */
+        }
+
+        .table_component tbody tr:nth-child(even) {
+            background-color: #ffffff; /* Màu nền cho dòng chẵn */
+        }
+
+        .table_component tbody tr:hover {
+            background-color: #85bcd6; /* Màu nền khi hover */
+        }
+        /* Thêm ảnh vào trang */
+        .image-container {
+            text-align: left;
+            
+        }
+
+        .image-container img {
+            width: 6px;
+            height: auto;
+            
+        }
+
+    html {font-family: Arial; display: inline-block; text-align: center;}
+    p {  font-size: 1.2rem;}
+    body {  margin: 0;}
+    .topnav {
+            display: flex; /* Sử dụng Flexbox */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            background-color: #2f4468;
+            color: white;
+            font-size: 1.7rem;
+            padding: 5px; /* Thêm khoảng cách bên trong */
+            max-height: 75px;
+        }
+
+        .topnav img {
+            margin-right: 10px; /* Khoảng cách giữa hình ảnh và tiêu đề */
+        }
+
+    .content { padding: 50px; }
+    .card { background-color: white; box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5); }
+    .cards { max-width: 700px; margin: 0 auto; display: grid; grid-gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .reading { font-size: 2.8rem; }
+    .packet { color: #bebebe; }
+    .card.temperature { color: #fd7e14; }
+    .card.humidity { color: #1b78e2; }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: green;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      input:checked + .slider {
+        background-color: #f32128;
+      }
+
+      input:focus + .slider {
+        box-shadow: 0 0 1px #f32128;
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
+      .navigation {
+        text-align: left; /* Căn trái cho các nút */
+        margin-left: 20px; /* Thêm khoảng cách bên trái */
+      }
+
+      .navigation button {
+        background-color: #4851b4; /* Màu nền */
+        color: white; /* Màu chữ */
+        border: none; /* Bỏ viền */
+        padding: 10px 20px; /* Khoảng cách bên trong nút */
+        text-align: center; /* Căn giữa nội dung nút */
+        text-decoration: none; /* Bỏ gạch chân nếu có */
+        display: inline-block; /* Hiển thị theo hàng ngang */
+        font-size: 16px; /* Kích thước chữ */
+        margin: 10px 0; /* Khoảng cách giữa các nút */
+        cursor: pointer; /* Thay đổi con trỏ thành dạng nhấn */
+        border-radius: 4px; /* Bo tròn góc nút */
+        transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu */
+      }
+
+      .navigation button:hover {
+        background-color: #455da0; /* Màu nền khi di chuột */
+      }
+
+      .navigation button:active {
+        background-color: #3e438e; /* Màu nền khi nhấn */
+        transform: translateY(4px); /* Hiệu ứng nút nhấn xuống */
+      }
+      
+      .topnav {
+        display: flex; /* Sử dụng Flexbox để dễ dàng căn chỉnh */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        background-color: #2f4468;
+        color: white;
+        font-size: 1.7rem;
+        padding: 5px;
+      }
+
+      .topnav img {
+        margin-right: 5px;
+      }
+
+      .topnav h3 {
+        flex-grow: 1; /* Đảm bảo tiêu đề được căn giữa */
+        text-align: center;
+      }
+
+      .logout-button {
+        background-color: #5236f4; /* Màu nền đỏ */
+        color: white; /* Màu chữ trắng */
+        border: none; /* Bỏ viền */
+        padding: 10px 20px; /* Khoảng cách bên trong nút */
+        font-size: 10px; /* Kích thước chữ */
+        cursor: pointer; /* Thay đổi con trỏ khi nhấn vào */
+        border-radius: 5px; /* Bo tròn góc nút */
+        margin-left: auto; /* Đẩy nút về phía bên phải */
+        transition: background-color 0.3s ease;
+      }
+
+      .logout-button:hover {
+        background-color: #d32f2f; /* Màu nền khi di chuột */
+      }
+
+      .logout-button:active {
+        background-color: #c62828; /* Màu nền khi nhấn */
+        box-shadow: 0 4px #666; /* Đổ bóng khi nhấn */
+        transform: translateY(2px); /* Hiệu ứng nhấn nút xuống */
+      }
+      .footer {
+            margin-top: 20px;
+            padding: 10px 20px;
+            text-align: left; /* Căn trái */
+            color: #555;
+            font-size: 0.9rem;
+            
+        }
+        
+
+        .cancel-button {
+          background-color: #f44336; /* Màu nền đỏ */
+          color: white; /* Màu chữ trắng */
+          border: none; /* Bỏ viền */
+          padding: 14px 20px; /* Khoảng cách bên trong nút */
+          font-size: 10px; /* Kích thước chữ */
+          cursor: pointer; /* Thay đổi con trỏ khi nhấn vào */
+          border-radius: 5px; /* Bo tròn góc nút */
+          transition: background-color 0.3s ease;
+        }
+
+        .cancel-button:active {
+          background-color:  #04AA6D;; /* Màu nền khi nhấn */
+          box-shadow: 0 4px #666; /* Đổ bóng khi nhấn */
+          transform: translateY(0.5px); /* Hiệu ứng nhấn nút xuống */
+        }
+
+        .export-button {
+            font-size: 12px; /* Cỡ chữ nhỏ hơn */
+            padding: 6px 12px; /* Giảm padding */
+            background-color: #4851b4; /* Màu nền */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .export-button:hover {
+            background-color: #455da0; /* Màu khi di chuột */
+        }
+
+        .export-button:active {
+            background-color: #3e438e; /* Màu khi nhấn */
+            transform: translateY(2px); /* Hiệu ứng nhấn xuống */
+        }
+        /* Center the image and position the close button */
+        .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+        position: relative;
+        }
+
+        img.avatar {
+        width: 20%;
+        border-radius: 0%;
+        }
+
+        .container-pop {
+        
+        padding: 16px;
+        }
+
+        span.psw {
+        float: right;
+        padding-top: 16px;
+        }
+
+        /* The Modal (background) */
+        .modal {
+        display: block; /* Hiển thị modal ngay khi tải trang */
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+        padding-top: 60px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content-pop {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto;
+        border: 6px solid #0061ff; /* Viền xanh nước biển */
+        width: 22%;
+        }
+
+
+
+        /* Add Zoom Animation */
+        .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)} 
+        to {-webkit-transform: scale(1)}
+        }
+        
+        @keyframes animatezoom {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+        .cancelbtn {
+            width: 100%;
+        }
+        }
+        /*  */
+        /* Nhấp nháy đỏ vàng */
+        @keyframes blink {
+            0% { color: red; }
+            50% { color: yellow; }
+            100% { color: red; }
+        }
+
+        /* Style chữ WARNING */
+        .warning-text {
+            font-size: 24px;
+            font-weight: bold;
+            display: block; /* Đẩy xuống dòng */
+            text-align: center;
+            animation: blink 0.5s infinite; /* Hiệu ứng nhấp nháy */
+        }
+  </style> <!--class khai báo-->
+</head>
+<body>  <!--hiển thị trên giao diện trang-->
+  <div class="topnav">
+    <img src="/anh1" alt="Device Image"> <!-- Đường dẫn đến hình ảnh -->
+    <h3 style="text-align: center">WSR DEFENDER</h3> <!-- Căn giữa tiêu đề -->
+    <button class="logout-button" onclick="logout()">Log out</button>
+</div>
+  <!-- Container chứa ảnh -->
+ <!--<div class="image-container">-->
+    <!--<img src="anh" alt="Device Image"> --><!-- Đường dẫn ảnh -->
+<!--</div>-->
+<div class="navigation">
+  
+  
+  <button onclick="window.location.href='/trangchu';">Dashboard</button>
+  <button onclick="window.location.href='/caidat';">Setting</button>
+  <button onclick>System Log</button>
+</div>
+<div id="popup1" class="modal" style="display:none;">
+  <form class="modal-content-pop animate">
+    <div class="imgcontainer">
+      <img src="/anh2" alt="Device Image" class="avatar">
+      <label class="warning-text"><b>WARNING</b></label>
+    </div>
+    <div class="container-pop" style="background-color:#ffffff;">
+        <div style="margin-bottom: 30px; display: flex; justify-content: center;">
+            <label id="warning1"></label>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <button type="button" onclick="document.getElementById('popup1').style.display='none'" class="cancel-button">Close</button>
+        </div>
+    </div>
+  </form>
+</div>
+
+<!-- Popup 2 -->
+<div id="popup2" class="modal" style="display:none;">
+  <form class="modal-content-pop animate">
+    <div class="imgcontainer">
+      <img src="/anh2" alt="Device Image" class="avatar">
+      <label class="warning-text"><b>WARNING</b></label>
+    </div>
+    <div class="container-pop" style="background-color:#ffffff;">
+        <div style="margin-bottom: 30px; display: flex; justify-content: center;">
+            <label id="warning2"></label>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <button type="button" onclick="document.getElementById('popup2').style.display='none'" class="cancel-button">Close</button>
+        </div>
+    </div>
+  </form>
+</div>
+  
+  
+  
+</form>
+</div>
+<!-- Bảng quản lý thiết bị -->
+<div class="content-wrapper">
+    <h4>Message</h4>
+<div class="table_component" role="region" tabindex="0">
+    
+  <table id="dataTable2">
+    
+    <tbody>
+        <tr><th>${new Date().toLocaleString()} Process started at Process started at Process started at Process started at  Process started at Process started at Process started at Process started at </th></tr>
+
+        </tbody>
+  </table>
+</div>
+<div style="margin-top: 25px;">
+    <label for="creatorName">Creator Name:</label>
+    <input type="text" id="creatorName" placeholder="Enter your name">
+    <button type="button" onclick="exportPDF()" class="export-button">Export to PDF</button>
+</div>
+
+<div class="table_component" role="region" tabindex="0" style="display:none;">
+    <table id="dataTable">
+      <caption>Device Manager</caption>
+      <thead>
+        <tr>
+          <th>Name device</th>
+          <th>IP device</th>
+          <th style="width: 15%;">MAC device</th>
+          <th style="width: 35%;">Status device</th>
+        </tr>
+      </thead>
+      <tbody>
+              <!-- Hàng ARP sẽ được thêm vào đây -->
+          </tbody>
+    </table>
+  </div>
+</div>
+
+
+  
+
+<script> 
+
+
+var xhttp1 = new XMLHttpRequest(); // Correct variable name
+  // AJAX handling for updating temperature and humidity
+  var xhttp2 = new XMLHttpRequest(); // Correct variable name
+
+  function fetchSyslog() {
+      fetch('/getSyslog')
+          .then(response => response.json())
+          .then(data => {
+            let tbody = document.querySelector('#dataTable2 tbody');
+            tbody.innerHTML = '';
+            for (let i = data.numRows-1; i >-1; i--) {
+              tbody.innerHTML += `
+                  <tr>
+                      <td>${data.syslog[i].log}</td>    
+                  </tr>
+              `;
+              }
+          });
+
+    }
+
+    function fetchArpTable() {
+      fetch('/getdataarp')
+          .then(response => response.json())
+          .then(data => {
+            let tbody = document.querySelector('#dataTable tbody');
+            tbody.innerHTML = '';
+            for (let i = 0; i < data.numRows; i++) {
+              tbody.innerHTML += `
+                  <tr>
+                      <td>${data.arp[i].device}</td>
+                      <td>${data.arp[i].ip_address}</td>
+                      <td>${data.arp[i].mac_address}</td>
+                      <td style="text-align: center;">${data.arp[i].status}</td>              
+                  </tr>
+              `;
+              }
+              let showScan = false;              
+              let showHoneypot = false;
+              let arpData = data.arp[data.numRows];
+              if (arpData.warningscan == "Scan" && Scanstatus) {
+                    showScan = true;
+                    Scanstatus = false;
+                }
+                if (arpData.warninghoneypot == "Honeypot-hit" && Honeypotstatus) {
+                    showHoneypot = true;
+                    Honeypotstatus = false;
+                }
+
+              // Gọi hàm hiển thị popup với trạng thái và thông báo tương ứng
+              showPopup(showScan, "One device scan network", showHoneypot, "One device connect to honeypot");
+          });
+
+    }
+
+    let Honeypotstatus = true;
+    let Scanstatus = true;
+    function fetchwarning() {
+      fetch('/getdataarp')
+          .then(response => response.json())
+          .then(data => {           
+                let showScan = false;              
+                let showHoneypot = false;
+                let arpData = data.arp[data.numRows];
+                if (arpData.warningscan == "Scan" && Scanstatus) {
+                      showScan = true;
+                      Scanstatus = false;
+                  }
+                  if (arpData.warninghoneypot == "Honeypot-hit" && Honeypotstatus) {
+                      showHoneypot = true;
+                      Honeypotstatus = false;
+                  }
+
+                // Gọi hàm hiển thị popup với trạng thái và thông báo tương ứng
+                showPopup(showScan, "One device scan network", showHoneypot, "One device connect to honeypot");
+          });
+
+    }
+
+
+    function toggleSwitch(switchId) {
+        var checkBox = document.getElementById("switch" + switchId);
+        var state = checkBox.checked ? 1 : 0; // 1 nếu ON, 0 nếu OFF
+
+        // Gửi yêu cầu POST để cập nhật trạng thái công tắc
+        var xhttp2 = new XMLHttpRequest();
+        xhttp2.open("POST", "/switch1", true);
+        xhttp2.send("id=" + switchId + "status=" + state);
+    } 
+
+    // Cập nhật bảng ARP mỗi 20 giây
+    window.onload = function() {
+        Honeypotstatus = true;
+        Scanstatus = true;
+        fetchwarning();
+        fetchArpTable();
+        fetchSyslog();
+        setInterval(fetchArpTable, 20000);
+        setInterval(fetchwarning, 5000);
+        setInterval(fetchSyslog, 100000);
+    }; // Cập nhật dữ liệu mỗi 5 giây
+
+    function logout() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "/login", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("action=logout");
+
+        xhttp.onload = function () {
+            var response = JSON.parse(this.responseText);
+            if (response.success) {
+                alert(response.message); // Thông báo người dùng đã đăng xuất
+                window.location.href = "/"; // Chuyển hướng đến trang đăng nhập
+                
+            } else {
+                alert("Logout failed!");
+            }
+        };
+        
+    }
+    
+
+    function showPopup(status1, message1, status2, message2) {
+        let showFirstPopup = false;
+        let showSecondPopup = false;
+
+        // Kiểm tra trạng thái và cập nhật nội dung popup
+        if (status1) {
+            const warningDiv1 = document.getElementById("warning1");
+            warningDiv1.innerHTML = `<p>${message1}</p>`;
+            document.getElementById("popup1").style.display = "block";
+            showFirstPopup = true;
+        }
+
+        if (status2) {
+            setTimeout(() => {
+                const warningDiv2 = document.getElementById("warning2");
+                warningDiv2.innerHTML = `<p>${message2}</p>`;
+                document.getElementById("popup2").style.display = "block";
+                showSecondPopup = true;
+            }, showFirstPopup ? 500 : 0); // Hiển thị popup 2 sau 500ms nếu popup 1 xuất hiện trước
+        }
+    }
+    function exportPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        
+        const creatorName = document.getElementById("creatorName").value || "Anonymous";
+        const logoBase64 = 'data:image/png;base64,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'; 
+        const x = 15; // Vị trí x của ảnh
+        const y = 15; // Vị trí y của ảnh
+        const width = 15; // Chiều rộng ảnh
+        const height = 15; // Chiều cao ảnh
+
+        doc.addImage(logoBase64, 'PNG', x, y, width, height);
+        // Title
+        doc.setFontSize(18);
+        doc.text("REPORT", 105, 20, null, null, "center");
+
+        // Creator's name and date
+        doc.setFontSize(8);
+        const pageWidth = doc.internal.pageSize.width;
+        doc.text("Created by: " + creatorName, pageWidth - 65, 30);
+        doc.text("Report created: " + new Date().toLocaleString(), pageWidth - 65, 35);
+        doc.setFontSize(14);
+        doc.text("A. Dashboard", 10, 40);
+        // Data table using autoTable
+        doc.autoTable({
+            html: '#dataTable',
+            startY: 45,
+        });
+         // Chuyển sang trang 2
+         doc.addPage();
+         doc.addImage(logoBase64, 'PNG', x, y, width, height);
+        doc.setFontSize(18);
+        doc.text("REPORT", 105, 20, null, null, "center");
+
+        // Creator's name and date
+        doc.setFontSize(8);
+        doc.text("Created by: " + creatorName, pageWidth - 65, 30);
+        doc.text("Report created: " + new Date().toLocaleString(), pageWidth - 65, 35);
+
+        doc.setFontSize(14);
+        doc.text("B. System Log", 10, 40);
+        
+
+        // In từng log vào trang 2
+        doc.autoTable({
+            html: '#dataTable2',
+            startY: 45,
+        });
+
+        doc.save("Report.pdf");
+    }
+        
+</script>   <!--các chức năng thực hiện trong thẻ này-->
+
+<div class="footer" id="dateTime">
+  <!-- Thời gian và múi giờ sẽ được hiển thị ở đây -->
+</div>
+
+
+<script>
+  function updateDateTime() {
+      const dateTimeElement = document.getElementById('dateTime');
+      const now = new Date();
+      const options = { 
+          year: 'numeric', month: 'long', day: 'numeric',
+          hour: '2-digit', minute: '2-digit', second: '2-digit', 
+          timeZoneName: 'short'
+      };
+      dateTimeElement.textContent = now.toLocaleString('en-US', options);
+  }
+
+  // Cập nhật thời gian ngay khi tải trang
+  updateDateTime();
+
+
+  // Cập nhật mỗi giây
+  setInterval(updateDateTime, 1000);
+</script>
+</body>
+</html>
