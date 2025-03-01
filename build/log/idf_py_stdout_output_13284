@@ -1,22 +1,12 @@
-[1/10] Performing build step for 'bootloader'
+[1/5] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Espressif/frameworks/enc28j60/build/partition_table/partition-table.bin D:/Espressif/frameworks/enc28j60/build/wifi_station.bin"
+wifi_station.bin binary size 0x11d670 bytes. Smallest app partition is 0x200000 bytes. 0xe2990 bytes (44%) free.
+[2/5] Performing build step for 'bootloader'
 [1/1] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Espressif/frameworks/enc28j60/build/bootloader/bootloader.bin"
 Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
-[2/8] Building C object esp-idf/arp_iot/CMakeFiles/__idf_arp_iot.dir/arp_iot.c.obj
-[3/8] Linking C static library esp-idf\arp_iot\libarp_iot.a
-[4/8] Generating ld/sections.ld
-[5/8] Linking CXX executable wifi_station.elf
-[6/8] Generating binary image from built executable
-esptool.py v4.7.0
-Creating esp32 image...
-Merged 2 ELF sections
-Successfully created esp32 image.
-Generated D:/Espressif/frameworks/enc28j60/build/wifi_station.bin
-[7/8] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Espressif/frameworks/enc28j60/build/partition_table/partition-table.bin D:/Espressif/frameworks/enc28j60/build/wifi_station.bin"
-wifi_station.bin binary size 0x83870 bytes. Smallest app partition is 0x100000 bytes. 0x7c790 bytes (49%) free.
-[7/8] cmd.exe /C "cd /D D:\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && D:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDesptool.py --chip esp32 -p COM10 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 wifi_station.bin 0x8000 partition_table/partition-table.bin
+[2/3] cmd.exe /C "cd /D D:\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && D:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/Espressif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=D:/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;D:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/Espressif/frameworks/enc28j60/build -P D:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_serial_toolesptool.py --chip esp32 -p COM10 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 wifi_station.bin 0x8000 partition_table/partition-table.bin
 esptool.py v4.7.0
 Serial port COM10
-Connecting....
+Connecting......
 Chip is ESP32-D0WD-V3 (revision v3.1)
 Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
 Crystal is 40MHz
@@ -28,37 +18,50 @@ Changing baud rate to 460800
 Changed.
 Configuring flash size...
 Flash will be erased from 0x00001000 to 0x00007fff...
-Flash will be erased from 0x00010000 to 0x00093fff...
+Flash will be erased from 0x00010000 to 0x0012dfff...
 Flash will be erased from 0x00008000 to 0x00008fff...
-Compressed 26720 bytes to 16349...
+Compressed 26720 bytes to 16347...
 Writing at 0x00001000... (100 %)
-Wrote 26720 bytes (16349 compressed) at 0x00001000 in 0.8 seconds (effective 261.4 kbit/s)...
+Wrote 26720 bytes (16347 compressed) at 0x00001000 in 0.8 seconds (effective 258.0 kbit/s)...
 Hash of data verified.
-Compressed 538736 bytes to 276166...
-Writing at 0x00010000... (5 %)
-Writing at 0x00014769... (11 %)
-Writing at 0x00028a29... (17 %)
-Writing at 0x0003752f... (23 %)
-Writing at 0x00041845... (29 %)
-Writing at 0x000472cf... (35 %)
-Writing at 0x0004cfff... (41 %)
-Writing at 0x00052dc9... (47 %)
-Writing at 0x000585e2... (52 %)
-Writing at 0x0005e17a... (58 %)
-Writing at 0x00063eeb... (64 %)
-Writing at 0x00069dab... (70 %)
-Writing at 0x00070187... (76 %)
-Writing at 0x00076933... (82 %)
-Writing at 0x000806b0... (88 %)
-Writing at 0x00087daa... (94 %)
-Writing at 0x0008e048... (100 %)
-Wrote 538736 bytes (276166 compressed) at 0x00010000 in 7.7 seconds (effective 559.3 kbit/s)...
+Compressed 1169008 bytes to 483967...
+Writing at 0x00010000... (3 %)
+Writing at 0x00014575... (6 %)
+Writing at 0x0001faa7... (10 %)
+Writing at 0x0002af47... (13 %)
+Writing at 0x0003a51f... (16 %)
+Writing at 0x00046239... (20 %)
+Writing at 0x00058177... (23 %)
+Writing at 0x00067420... (26 %)
+Writing at 0x00074ad3... (30 %)
+Writing at 0x000847c8... (33 %)
+Writing at 0x00090341... (36 %)
+Writing at 0x0009a006... (40 %)
+Writing at 0x000a4fa9... (43 %)
+Writing at 0x000b4ac1... (46 %)
+Writing at 0x000c2e74... (50 %)
+Writing at 0x000cf989... (53 %)
+Writing at 0x000d7f10... (56 %)
+Writing at 0x000de21c... (60 %)
+Writing at 0x000e4557... (63 %)
+Writing at 0x000e9ed8... (66 %)
+Writing at 0x000f0099... (70 %)
+Writing at 0x000f5ba9... (73 %)
+Writing at 0x000fb42e... (76 %)
+Writing at 0x00101038... (80 %)
+Writing at 0x00106ca4... (83 %)
+Writing at 0x0010ccdd... (86 %)
+Writing at 0x0011308c... (90 %)
+Writing at 0x001190be... (93 %)
+Writing at 0x00121a28... (96 %)
+Writing at 0x0012a1a5... (100 %)
+Wrote 1169008 bytes (483967 compressed) at 0x00010000 in 13.4 seconds (effective 700.0 kbit/s)...
 Hash of data verified.
-Compressed 3072 bytes to 103...
+Compressed 3072 bytes to 88...
 Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 469.4 kbit/s)...
+Wrote 3072 bytes (88 compressed) at 0x00008000 in 0.1 seconds (effective 473.6 kbit/s)...
 Hash of data verified.
 
 Leaving...
 Hard resetting via RTS pin...
-F_PATH=D:/Espressif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=D:/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;D:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/Espressif/frameworks/enc28j60/build -P D:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_serial_tool.cmake"
+.cmake"

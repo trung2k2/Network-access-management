@@ -1,0 +1,330 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 11 2025 12:35:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (77) boot:  1 storage          Unknown data     01 82 00210000 00100000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (89) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=d2314h (860948) map[0m
+[0;32mI (392) esp_image: segment 1: paddr=000e233c vaddr=3ffb0000 size=025ech (  9708) load[0m
+[0;32mI (396) esp_image: segment 2: paddr=000e4930 vaddr=40080000 size=0b6e8h ( 46824) load[0m
+[0;32mI (416) esp_image: segment 3: paddr=000f0020 vaddr=400d0020 size=4a544h (304452) map[0m
+[0;32mI (521) esp_image: segment 4: paddr=0013a56c vaddr=4008b6e8 size=03de4h ( 15844) load[0m
+[0;32mI (535) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (535) boot: Disabling RNG early entropy source...[0m
+[0;32mI (547) cpu_start: Multicore app[0m
+[0;32mI (555) cpu_start: Pro cpu start user code[0m
+[0;32mI (556) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (556) cpu_start: Application information:[0m
+[0;32mI (559) cpu_start: Project name:     wifi_station[0m
+[0;32mI (564) cpu_start: App version:      a6f7304-dirty[0m
+[0;32mI (569) cpu_start: Compile time:     Jan 22 2025 12:18:37[0m
+[0;32mI (575) cpu_start: ELF file SHA256:  c3f500d22...[0m
+[0;32mI (581) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (586) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (591) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (596) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (601) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (608) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFB9330 len 00026CD0 (155 KiB): DRAM[0m
+[0;32mI (620) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (626) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (633) heap_init: At 4008F4CC len 00010B34 (66 KiB): IRAM[0m
+[0;32mI (641) spi_flash: detected chip: generic[0m
+[0;32mI (644) spi_flash: flash io: dio[0m
+[0;32mI (648) main_task: Started on CPU0[0m
+[0;32mI (658) main_task: Calling app_main()[0m
+[0;32mI (658) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (658) enc28j60: revision: 0[0m
+[0;31mE (668) enc28j60: enc28j60_verify_id(537): wrong chip ID[0m
+[0;31mE (668) enc28j60: emac_enc28j60_init(1012): vefiry chip ID failed[0m
+[0;32mI (678) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;31mE (688) esp_eth: esp_eth_driver_install(228): init mac failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x400d7fc6
+file: "./main/app_main.c" line 188
+func: app_main
+expression: esp_eth_driver_install(&eth_config, &eth_handle)
+
+abort() was called at PC 0x40086d37 on core 0
+
+
+Backtrace: 0x40081822:0x3ffbb460 0x40086d41:0x3ffbb480 0x4008ddfd:0x3ffbb4a0 0x40086d37:0x3ffbb510 0x400d7fc6:0x3ffbb540 0x40119ceb:0x3ffbb630 0x400877d5:0x3ffbb660
+
+
+
+
+ELF file SHA256: c3f500d22
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 11 2025 12:35:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (77) boot:  1 storage          Unknown data     01 82 00210000 00100000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (89) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=d2314h (860948) map[0m
+[0;32mI (392) esp_image: segment 1: paddr=000e233c vaddr=3ffb0000 size=025ech (  9708) load[0m
+[0;32mI (396) esp_image: segment 2: paddr=000e4930 vaddr=40080000 size=0b6e8h ( 46824) load[0m
+[0;32mI (416) esp_image: segment 3: paddr=000f0020 vaddr=400d0020 size=4a544h (304452) map[0m
+[0;32mI (521) esp_image: segment 4: paddr=0013a56c vaddr=4008b6e8 size=03de4h ( 15844) load[0m
+[0;32mI (535) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (535) boot: Disabling RNG early entropy source...[0m
+[0;32mI (547) cpu_start: Multicore app[0m
+[0;32mI (555) cpu_start: Pro cpu start user code[0m
+[0;32mI (555) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (556) cpu_start: Application information:[0m
+[0;32mI (558) cpu_start: Project name:     wifi_station[0m
+[0;32mI (564) cpu_start: App version:      a6f7304-dirty[0m
+[0;32mI (569) cpu_start: Compile time:     Jan 22 2025 12:18:37[0m
+[0;32mI (575) cpu_start: ELF file SHA256:  c3f500d22...[0m
+[0;32mI (581) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (586) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (591) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (596) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (601) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (608) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFB9330 len 00026CD0 (155 KiB): DRAM[0m
+[0;32mI (620) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (626) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (633) heap_init: At 4008F4CC len 00010B34 (66 KiB): IRAM[0m
+[0;32mI (640) spi_flash: detected chip: generic[0m
+[0;32mI (644) spi_flash: flash io: dio[0m
+[0;32mI (648) main_task: Started on CPU0[0m
+[0;32mI (658) main_task: Calling app_main()[0m
+[0;32mI (658) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (658) enc28j60: revision: 0[0m
+[0;31mE (668) enc28j60: enc28j60_verify_id(537): wrong chip ID[0m
+[0;31mE (668) enc28j60: emac_enc28j60_init(1012): vefiry chip ID failed[0m
+[0;32mI (678) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;31mE (688) esp_eth: esp_eth_driver_install(228): init mac failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x400d7fc6
+file: "./main/app_main.c" line 188
+func: app_main
+expression: esp_eth_driver_install(&eth_config, &eth_handle)
+
+abort() was called at PC 0x40086d37 on core 0
+
+
+Backtrace: 0x40081822:0x3ffbb460 0x40086d41:0x3ffbb480 0x4008ddfd:0x3ffbb4a0 0x40086d37:0x3ffbb510 0x400d7fc6:0x3ffbb540 0x40119ceb:0x3ffbb630 0x400877d5:0x3ffbb660
+
+
+
+
+ELF file SHA256: c3f500d22
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 11 2025 12:35:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (77) boot:  1 storage          Unknown data     01 82 00210000 00100000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (89) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=d2314h (860948) map[0m
+[0;32mI (392) esp_image: segment 1: paddr=000e233c vaddr=3ffb0000 size=025ech (  9708) load[0m
+[0;32mI (396) esp_image: segment 2: paddr=000e4930 vaddr=40080000 size=0b6e8h ( 46824) load[0m
+[0;32mI (416) esp_image: segment 3: paddr=000f0020 vaddr=400d0020 size=4a544h (304452) map[0m
+[0;32mI (521) esp_image: segment 4: paddr=0013a56c vaddr=4008b6e8 size=03de4h ( 15844) load[0m
+[0;32mI (535) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (535) boot: Disabling RNG early entropy source...[0m
+[0;32mI (547) cpu_start: Multicore app[0m
+[0;32mI (555) cpu_start: Pro cpu start user code[0m
+[0;32mI (555) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (556) cpu_start: Application information:[0m
+[0;32mI (558) cpu_start: Project name:     wifi_station[0m
+[0;32mI (564) cpu_start: App version:      a6f7304-dirty[0m
+[0;32mI (569) cpu_start: Compile time:     Jan 22 2025 12:18:37[0m
+[0;32mI (575) cpu_start: ELF file SHA256:  c3f500d22...[0m
+[0;32mI (581) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (586) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (591) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (596) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (601) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (608) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFB9330 len 00026CD0 (155 KiB): DRAM[0m
+[0;32mI (620) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (626) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (633) heap_init: At 4008F4CC len 00010B34 (66 KiB): IRAM[0m
+[0;32mI (640) spi_flash: detected chip: generic[0m
+[0;32mI (644) spi_flash: flash io: dio[0m
+[0;32mI (648) main_task: Started on CPU0[0m
+[0;32mI (658) main_task: Calling app_main()[0m
+[0;32mI (658) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (658) enc28j60: revision: 0[0m
+[0;31mE (668) enc28j60: enc28j60_verify_id(537): wrong chip ID[0m
+[0;31mE (668) enc28j60: emac_enc28j60_init(1012): vefiry chip ID failed[0m
+[0;32mI (678) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;31mE (688) esp_eth: esp_eth_driver_install(228): init mac failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x400d7fc6
+file: "./main/app_main.c" line 188
+func: app_main
+expression: esp_eth_driver_install(&eth_config, &eth_handle)
+
+abort() was called at PC 0x40086d37 on core 0
+
+
+Backtrace: 0x40081822:0x3ffbb460 0x40086d41:0x3ffbb480 0x4008ddfd:0x3ffbb4a0 0x40086d37:0x3ffbb510 0x400d7fc6:0x3ffbb540 0x40119ceb:0x3ffbb630 0x400877d5:0x3ffbb660
+
+
+
+
+ELF file SHA256: c3f500d22
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 11 2025 12:35:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (77) boot:  1 storage          Unknown data     01 82 00210000 00100000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (89) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=d2314h (860948) map[0m
+[0;32mI (392) esp_image: segment 1: paddr=000e233c vaddr=3ffb0000 size=025ech (  9708) load[0m
+[0;32mI (396) esp_image: segment 2: paddr=000e4930 vaddr=40080000 size=0b6e8h ( 46824) load[0m
+[0;32mI (416) esp_image: segment 3: paddr=000f0020 vaddr=400d0020 size=4a544h (304452) map[0m
+[0;32mI (521) esp_image: segment 4: paddr=0013a56c vaddr=4008b6e8 size=03de4h ( 15844) load[0m
+[0;32mI (535) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (535) boot: Disabling RNG early entropy source...[0m
+[0;32mI (547) cpu_start: Multicore app[0m
+[0;32mI (555) cpu_start: Pro cpu start user code[0m
+[0;32mI (555) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (555) cpu_start: Application information:[0m
+[0;32mI (558) cpu_start: Project name:     wifi_station[0m
+[0;32mI (564) cpu_start: App version:      a6f7304-dirty[0m
+[0;32mI (569) cpu_start: Compile time:     Jan 22 2025 12:18:37[0m
+[0;32mI (575) cpu_start: ELF file SHA256:  c3f500d22...[0m
+[0;32mI (581) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (586) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (591) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (596) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (601) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (608) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFB9330 len 00026CD0 (155 KiB): DRAM[0m
+[0;32mI (620) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (626) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (633) heap_init: At 4008F4CC len 00010B34 (66 KiB): IRAM[0m
+[0;32mI (640) spi_flash: detected chip: generic[0m
+[0;32mI (644) spi_flash: flash io: dio[0m
+[0;32mI (648) main_task: Started on CPU0[0m
+[0;32mI (658) main_task: Calling app_main()[0m
+[0;32mI (658) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (658) enc28j60: revision: 0[0m
+[0;31mE (668) enc28j60: enc28j60_verify_id(537): wrong chip ID[0m
+[0;31mE (668) enc28j60: emac_enc28j60_init(1012): vefiry chip ID failed[0m
+[0;32mI (678) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;31mE (688) esp_eth: esp_eth_driver_install(228): init mac failed[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x400d7fc6
+file: "./main/app_main.c" line 188
+func: app_main
+expression: esp_eth_driver_install(&eth_config, &eth_handle)
+
+abort() was called at PC 0x40086d37 on core 0
+
+
+Backtrace: 0x40081822:0x3ffbb460 0x40086d41:0x3ffbb480 0x4008ddfd:0x3ffbb4a0 0x40086d37:0x3ffbb510 0x400d7fc6:0x3ffbb540 0x40119ceb:0x3ffbb630 0x400877d5:0x3ffbb660
+
+
+
+
+ELF file SHA256: c3f500d22
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 11 2025 12:35:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (77) boot:  1 storage          Unknown data     01 82 00210000 00100000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (89) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=d2314h (860948) map[0m

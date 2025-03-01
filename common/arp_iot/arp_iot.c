@@ -186,7 +186,7 @@ void sendArp_request(esp_netif_t *eth_netif)
 }
 //ham tạo file json gửi đến client
 uint8_t MAC_Seimens[3] = {0xE0,0xDC,0xA0};
-uint8_t MAC_Tplink[3] = {0xC0,0x4A,0x00};
+uint8_t MAC_Tplink[3] = {0xE4,0xFA,0xC4};
 
 void send_arpupdate(cJSON *json)
 {
@@ -366,13 +366,14 @@ void check_arp_status(esp_netif_t *eth_netif)
 void update_arp_data() {
     eth_netif_callback();
 }
-
+int status_arp = 0;
 void sendarp_task(void *pvParameters) {
     while(1){
         if (priority_main && suspendFlag_sendarp) {
-            //printf("Bat task\n");                
+            //printf("Bat task\n");
+            if(status_arp >= 1)                
                 update_arp_data();
-
+            status_arp++;
             vTaskDelay(delayTime_sendarp/ portTICK_PERIOD_MS); // Delay 100 giây            
         }
         else {   

@@ -1,0 +1,10 @@
+CMake Error at D:/Espressif/frameworks/esp-idf-v5.2.2/tools/cmake/build.cmake:268 (message):
+  Failed to resolve component 'ledc'.
+Call Stack (most recent call first):
+  D:/Espressif/frameworks/esp-idf-v5.2.2/tools/cmake/build.cmake:304 (__build_resolve_and_add_req)
+  D:/Espressif/frameworks/esp-idf-v5.2.2/tools/cmake/build.cmake:599 (__build_expand_requirements)
+  D:/Espressif/frameworks/esp-idf-v5.2.2/tools/cmake/project.cmake:605 (idf_build_process)
+  CMakeLists.txt:7 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

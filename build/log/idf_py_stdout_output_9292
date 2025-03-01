@@ -1,66 +1,185 @@
-[1/9] Generating index3.html.S
-[2/9] Performing build step for 'bootloader'
-[1/1] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Espressif/frameworks/enc28j60/build/bootloader/bootloader.bin"
-Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
-[3/7] Building ASM object CMakeFiles/wifi_station.elf.dir/index3.html.S.obj
-[4/7] Linking CXX executable wifi_station.elf
-[5/7] Generating binary image from built executable
-esptool.py v4.7.0
-Creating esp32 image...
-Merged 2 ELF sections
-Successfully created esp32 image.
-Generated D:/Espressif/frameworks/enc28j60/build/wifi_station.bin
-[6/7] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Espressif/frameworks/enc28j60/build/partition_table/partition-table.bin D:/Espressif/frameworks/enc28j60/build/wifi_station.bin"
-wifi_station.bin binary size 0x9bc20 bytes. Smallest app partition is 0x100000 bytes. 0x643e0 bytes (39%) free.
-[6/7] cmd.exe /C "cd /D D:\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && D:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/Espressif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=D:/Espreesptool.py --chip esp32 -p COM10 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 wifi_station.bin 0x8000 partition_table/partition-table.bin
-esptool.py v4.7.0
-Serial port COM10
-Connecting............
-Chip is ESP32-D0WD-V3 (revision v3.1)
-Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
-Crystal is 40MHz
-MAC: fc:e8:c0:74:4e:70
-Uploading stub...
-Running stub...
-Stub running...
-Changing baud rate to 460800
-Changed.
-Configuring flash size...
-Flash will be erased from 0x00001000 to 0x00007fff...
-Flash will be erased from 0x00010000 to 0x000abfff...
-Flash will be erased from 0x00008000 to 0x00008fff...
-Compressed 26720 bytes to 16349...
-Writing at 0x00001000... (100 %)
-Wrote 26720 bytes (16349 compressed) at 0x00001000 in 0.8 seconds (effective 259.4 kbit/s)...
-Hash of data verified.
-Compressed 637984 bytes to 320454...
-Writing at 0x00010000... (5 %)
-Writing at 0x00014702... (10 %)
-Writing at 0x0002942a... (15 %)
-Writing at 0x000352ec... (20 %)
-Writing at 0x0003dec4... (25 %)
-Writing at 0x0004ce3f... (30 %)
-Writing at 0x00056506... (35 %)
-Writing at 0x0005c319... (40 %)
-Writing at 0x00062de4... (45 %)
-Writing at 0x000684f8... (50 %)
-Writing at 0x0006e4de... (55 %)
-Writing at 0x000741c2... (60 %)
-Writing at 0x00079a25... (65 %)
-Writing at 0x0007f603... (70 %)
-Writing at 0x00085223... (75 %)
-Writing at 0x0008b147... (80 %)
-Writing at 0x000914be... (85 %)
-Writing at 0x00097641... (90 %)
-Writing at 0x0009f204... (95 %)
-Writing at 0x000a8742... (100 %)
-Wrote 637984 bytes (320454 compressed) at 0x00010000 in 8.6 seconds (effective 591.6 kbit/s)...
-Hash of data verified.
-Compressed 3072 bytes to 103...
-Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 446.5 kbit/s)...
-Hash of data verified.
+ets Jul 29 2019 12:21:46
 
-Leaving...
-Hard resetting via RTS pin...
-ssif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;D:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/Espressif/frameworks/enc28j60/build -P D:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_serial_tool.cmake"
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 11 2025 12:35:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (77) boot:  1 storage          Unknown data     01 82 00210000 00100000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (89) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=d2314h (860948) map[0m
+[0;32mI (392) esp_image: segment 1: paddr=000e233c vaddr=3ffb0000 size=025ech (  9708) load[0m
+[0;32mI (396) esp_image: segment 2: paddr=000e4930 vaddr=40080000 size=0b6e8h ( 46824) load[0m
+[0;32mI (416) esp_image: segment 3: paddr=000f0020 vaddr=400d0020 size=4a544h (304452) map[0m
+[0;32mI (521) esp_image: segment 4: paddr=0013a56c vaddr=4008b6e8 size=03de4h ( 15844) load[0m
+[0;32mI (535) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (535) boot: Disabling RNG early entropy source...[0m
+[0;32mI (547) cpu_start: Multicore app[0m
+[0;32mI (555) cpu_start: Pro cpu start user code[0m
+[0;32mI (556) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (556) cpu_start: Application information:[0m
+[0;32mI (559) cpu_start: Project name:     wifi_station[0m
+[0;32mI (564) cpu_start: App version:      a6f7304-dirty[0m
+[0;32mI (569) cpu_start: Compile time:     Jan 11 2025 12:35:17[0m
+[0;32mI (576) cpu_start: ELF file SHA256:  070b92667...[0m
+[0;32mI (581) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (586) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (591) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (596) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (601) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (608) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFB9330 len 00026CD0 (155 KiB): DRAM[0m
+[0;32mI (620) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (626) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (633) heap_init: At 4008F4CC len 00010B34 (66 KiB): IRAM[0m
+[0;32mI (641) spi_flash: detected chip: generic[0m
+[0;32mI (644) spi_flash: flash io: dio[0m
+[0;32mI (648) main_task: Started on CPU0[0m
+[0;32mI (658) main_task: Calling app_main()[0m
+[0;32mI (658) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (658) enc28j60: revision: 6[0m
+[0;32mI (678) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (678) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (678) eth_example: Ethernet Started[0m
+[0;32mI (2678) enc28j60: working in 10Mbps[0m
+[0;32mI (2678) enc28j60: working in half duplex[0m
+[0;32mI (2678) eth_example: Ethernet Link Up[0m
+[0;32mI (2678) eth_example: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2688) esp_netif_handlers: eth ip: 192.168.0.160, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2698) eth_example: Ethernet Got IP Address[0m
+[0;32mI (2698) eth_example: ~~~~~~~~~~~[0m
+[0;32mI (2708) eth_example: ETHIP:192.168.0.160[0m
+[0;32mI (2708) eth_example: ETHMASK:255.255.255.0[0m
+[0;32mI (2718) eth_example: ETHGW:192.168.0.1[0m
+[0;32mI (2718) eth_example: ~~~~~~~~~~~[0m
+Bang ARP Table: 2
+IP: 192.168.0.105, MAC: 08:8F:C3:83:4A:A6
+IP: 192.168.0.1, MAC: E4:FA:C4:27:55:D9
+[0;32mI (10838) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (11838) SERVER: Starting server on port: '80'[0m
+[0;32mI (11838) SERVER: Registering URI handlers[0m
+Tat task kepp
+[0;32mI (11868) main_task: Returned from app_main()[0m
+[0;33mW (36098) enc28j60: tx_ready_sem expired[0m
+[0;33mW (59098) enc28j60: tx_ready_sem expired[0m
+[0;33mW (80678) enc28j60: tx_ready_sem expired[0m
+[0;33mW (104928) enc28j60: tx_ready_sem expired[0m
+[0;33mW (132008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (136928) enc28j60: tx_ready_sem expired[0m
+[0;33mW (152008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (160678) enc28j60: tx_ready_sem expired[0m
+[0;33mW (172008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (192008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (200928) enc28j60: tx_ready_sem expired[0m
+[0;33mW (212008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (232008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (240678) enc28j60: tx_ready_sem expired[0m
+[0;33mW (252008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (272008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (288928) enc28j60: tx_ready_sem expired[0m
+[0;33mW (292008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (312008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (320678) enc28j60: tx_ready_sem expired[0m
+[0;33mW (332008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (352008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (372008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (392008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (400678) enc28j60: tx_ready_sem expired[0m
+[0;33mW (412008) enc28j60: tx_ready_sem expired[0m
+[0;33mW (432008) enc28j60: tx_ready_sem expired[0m
+[0;32mI (434678) enc28j60: working in 10Mbps[0m
+[0;32mI (434678) enc28j60: working in half duplex[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 11 2025 12:35:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (77) boot:  1 storage          Unknown data     01 82 00210000 00100000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (89) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=d2314h (860948) map[0m
+[0;32mI (392) esp_image: segment 1: paddr=000e233c vaddr=3ffb0000 size=025ech (  9708) load[0m
+[0;32mI (396) esp_image: segment 2: paddr=000e4930 vaddr=40080000 size=0b6e8h ( 46824) load[0m
+[0;32mI (416) esp_image: segment 3: paddr=000f0020 vaddr=400d0020 size=4a544h (304452) map[0m
+[0;32mI (521) esp_image: segment 4: paddr=0013a56c vaddr=4008b6e8 size=03de4h ( 15844) load[0m
+[0;32mI (535) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (535) boot: Disabling RNG early entropy source...[0m
+[0;32mI (547) cpu_start: Multicore app[0m
+[0;32mI (555) cpu_start: Pro cpu start user code[0m
+[0;32mI (556) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (556) cpu_start: Application information:[0m
+[0;32mI (559) cpu_start: Project name:     wifi_station[0m
+[0;32mI (564) cpu_start: App version:      a6f7304-dirty[0m
+[0;32mI (569) cpu_start: Compile time:     Jan 11 2025 12:35:17[0m
+[0;32mI (576) cpu_start: ELF file SHA256:  070b92667...[0m
+[0;32mI (581) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (586) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (591) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (596) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (601) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (608) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFB9330 len 00026CD0 (155 KiB): DRAM[0m
+[0;32mI (620) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (626) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (633) heap_init: At 4008F4CC len 00010B34 (66 KiB): IRAM[0m
+[0;32mI (641) spi_flash: detected chip: generic[0m
+[0;32mI (644) spi_flash: flash io: dio[0m
+[0;32mI (648) main_task: Started on CPU0[0m
+[0;32mI (658) main_task: Calling app_main()[0m
+[0;32mI (658) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (658) enc28j60: revision: 6[0m
+[0;32mI (678) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (678) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (678) eth_example: Ethernet Started[0m
+[0;32mI (2678) enc28j60: working in 10Mbps[0m
+[0;32mI (2678) enc28j60: working in half duplex[0m
+[0;32mI (2678) eth_example: Ethernet Link Up[0m
+[0;32mI (2678) eth_example: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2688) esp_netif_handlers: eth ip: 192.168.0.160, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2698) eth_example: Ethernet Got IP Address[0m
+[0;32mI (2698) eth_example: ~~~~~~~~~~~[0m
+[0;32mI (2708) eth_example: ETHIP:192.168.0.160[0m
+[0;32mI (2708) eth_example: ETHMASK:255.255.255.0[0m
+[0;32mI (2718) eth_example: ETHGW:192.168.0.1[0m
+[0;32mI (2718) eth_example: ~~~~~~~~~~~[0m
+Bang ARP Table: 2
+IP: 192.168.0.1, MAC: E4:FA:C4:27:55:D9
+IP: 192.168.0.105, MAC: 08:8F:C3:83:4A:A6
+[0;32mI (10838) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (11838) SERVER: Starting server on port: '80'[0m
+[0;32mI (11838) SERVER: Registering URI handlers[0m
+Tat task kepp
+[0;32mI (11878) main_task: Returned from app_main()[0m

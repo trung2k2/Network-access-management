@@ -361,27 +361,27 @@ static const httpd_uri_t sign_data= {
 };
 
 /* An HTTP GET handler */
-static esp_err_t hello_get_handler(httpd_req_t *req) //trang chủ
-{
-    if (!check_login(req)) {
-        // Nếu chưa đăng nhập, trả về mã lỗi hoặc chuyển hướng
-        httpd_resp_set_status(req, "302 Found"); // Mã trạng thái 302
-        httpd_resp_set_hdr(req, "Location", "/"); // Đặt tiêu đề Location
-        httpd_resp_send(req, NULL, 0); // Gửi phản hồi rỗng
-        return ESP_OK; // Kết thúc xử lý
-    }
-    httpd_resp_set_type(req, "text/html");
-    httpd_resp_send(req, (const char *)index_html_start, index_html_end - index_html_start); //send lại phản hồi khi client request vào dht11
-    return ESP_OK;
-}
+ static esp_err_t hello_get_handler(httpd_req_t *req) //trang chủ
+ {
+     if (!check_login(req)) {
+         // Nếu chưa đăng nhập, trả về mã lỗi hoặc chuyển hướng
+         httpd_resp_set_status(req, "302 Found"); // Mã trạng thái 302
+         httpd_resp_set_hdr(req, "Location", "/"); // Đặt tiêu đề Location
+         httpd_resp_send(req, NULL, 0); // Gửi phản hồi rỗng
+         return ESP_OK; // Kết thúc xử lý
+     }
+     httpd_resp_set_type(req, "text/html");
+     httpd_resp_send(req, (const char *)index_html_start, index_html_end - index_html_start); //send lại phản hồi khi client request vào dht11
+     return ESP_OK;
+ }
 
-static const httpd_uri_t get_dht11= {
-    .uri       = "/trangchu",
-    .method    = HTTP_GET,
-    .handler   = hello_get_handler,
-    /* Let's pass response string in user
-     * context to demonstrate it's usage */
-    .user_ctx  = NULL
+ static const httpd_uri_t get_dht11= {
+     .uri       = "/trangchu",
+     .method    = HTTP_GET,
+     .handler   = hello_get_handler,
+     /* Let's pass response string in user
+      * context to demonstrate it's usage */
+     .user_ctx  = NULL
 };
 
 static esp_err_t syslog_get_handler(httpd_req_t *req) //trang chủ

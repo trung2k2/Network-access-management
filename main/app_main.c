@@ -32,7 +32,7 @@
 #include "output_iot.h"
 #include "time.h"
 #include "setting_iot.h"
-
+#include "blink_iot.h"
 static const char *TAG = "eth_example";
 esp_netif_t *eth_netif = NULL;
 TaskHandle_t test_taskTaskHandle = NULL;
@@ -143,6 +143,8 @@ void app_main(void)
     ESP_ERROR_CHECK(esp_event_loop_create_default());
     esp_netif_config_t netif_cfg = ESP_NETIF_DEFAULT_ETH();
     eth_netif = esp_netif_new(&netif_cfg);
+    blink_iot_init();
+    set_rgb_color("FF0000");
 
     // Define static IP configuration
     esp_netif_ip_info_t ip_info;
@@ -167,7 +169,7 @@ void app_main(void)
         .mode = 0,
         .clock_speed_hz = CONFIG_EXAMPLE_ENC28J60_SPI_CLOCK_MHZ * 1000 * 1000,
         .spics_io_num = CONFIG_EXAMPLE_ENC28J60_CS_GPIO,
-        .queue_size = 20,
+        .queue_size = 7,
         .cs_ena_posttrans = enc28j60_cal_spi_cs_hold_time(CONFIG_EXAMPLE_ENC28J60_SPI_CLOCK_MHZ),
     };
 
@@ -214,6 +216,7 @@ void app_main(void)
     /* start Ethernet driver state machine */
     ESP_ERROR_CHECK(esp_eth_start(eth_handle));
     log_event("Initialize device");
+    
     vTaskDelay(10000 / portTICK_PERIOD_MS); 
     IP4_ADDR(&honeypot_ip, 192, 168, 0, 161);
     IP4_ADDR(&dhcp_server_ip, 192, 168, 0, 1);
@@ -232,7 +235,8 @@ void app_main(void)
     init_time();
     
     start_webserver();
+    set_rgb_color("FFFFFF");
     task_init_set();
-
+    
     
 }

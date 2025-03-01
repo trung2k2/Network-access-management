@@ -1,0 +1,89 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 11 2025 12:35:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (77) boot:  1 storage          Unknown data     01 82 00210000 00100000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (89) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=d1c64h (859236) map[0m
+[0;32mI (392) esp_image: segment 1: paddr=000e1c8c vaddr=3ffb0000 size=02594h (  9620) load[0m
+[0;32mI (395) esp_image: segment 2: paddr=000e4228 vaddr=40080000 size=0bdf0h ( 48624) load[0m
+[0;32mI (416) esp_image: segment 3: paddr=000f0020 vaddr=400d0020 size=492f8h (299768) map[0m
+[0;32mI (519) esp_image: segment 4: paddr=00139320 vaddr=4008bdf0 size=034b4h ( 13492) load[0m
+[0;32mI (533) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (533) boot: Disabling RNG early entropy source...[0m
+[0;32mI (544) cpu_start: Multicore app[0m
+[0;32mI (553) cpu_start: Pro cpu start user code[0m
+[0;32mI (553) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (553) cpu_start: Application information:[0m
+[0;32mI (556) cpu_start: Project name:     wifi_station[0m
+[0;32mI (561) cpu_start: App version:      a6f7304-dirty[0m
+[0;32mI (567) cpu_start: Compile time:     Jan 22 2025 13:37:51[0m
+[0;32mI (573) cpu_start: ELF file SHA256:  3d00790f2...[0m
+[0;32mI (578) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (584) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (588) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (593) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (598) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (605) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (611) heap_init: At 3FFB9280 len 00026D80 (155 KiB): DRAM[0m
+[0;32mI (618) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4008F2A4 len 00010D5C (67 KiB): IRAM[0m
+[0;32mI (638) spi_flash: detected chip: generic[0m
+[0;32mI (641) spi_flash: flash io: dio[0m
+[0;32mI (646) main_task: Started on CPU0[0m
+[0;32mI (656) main_task: Calling app_main()[0m
+[0;32mI (656) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (656) enc28j60: revision: 6[0m
+[0;32mI (676) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (676) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (676) eth_example: Ethernet Started[0m
+[0;32mI (2676) enc28j60: working in 10Mbps[0m
+[0;32mI (2676) enc28j60: working in half duplex[0m
+[0;32mI (2676) eth_example: Ethernet Link Up[0m
+[0;32mI (2676) eth_example: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2686) esp_netif_handlers: eth ip: 192.168.0.50, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2696) eth_example: Ethernet Got IP Address[0m
+[0;32mI (2696) eth_example: ~~~~~~~~~~~[0m
+[0;32mI (2706) eth_example: ETHIP:192.168.0.50[0m
+[0;32mI (2706) eth_example: ETHMASK:255.255.255.0[0m
+[0;32mI (2716) eth_example: ETHGW:192.168.0.1[0m
+[0;32mI (2716) eth_example: ~~~~~~~~~~~[0m
+Bang ARP Table: 1
+IP: 192.168.0.105, MAC: 08:8F:C3:83:4A:A6
+[0;32mI (10846) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (11856) SERVER: Starting server on port: '80'[0m
+[0;32mI (11856) SERVER: Registering URI handlers[0m
+Tat task kepp
+[0;32mI (11856) main_task: Returned from app_main()[0m
+[0;32mI (54676) eth_example: Ethernet Link Down[0m
+[0;32mI (60676) enc28j60: working in 10Mbps[0m
+[0;32mI (60676) enc28j60: working in half duplex[0m
+[0;32mI (60676) eth_example: Ethernet Link Up[0m
+[0;32mI (60676) eth_example: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (60686) esp_netif_handlers: eth ip: 192.168.0.50, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (60696) eth_example: Ethernet Got IP Address[0m
+[0;32mI (60696) eth_example: ~~~~~~~~~~~[0m
+[0;32mI (60706) eth_example: ETHIP:192.168.0.50[0m
+[0;32mI (60706) eth_example: ETHMASK:255.255.255.0[0m
+[0;32mI (60716) eth_example: ETHGW:192.168.0.1[0m
+[0;32mI (60716) eth_example: ~~~~~~~~~~~[0m

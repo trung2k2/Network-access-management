@@ -1,0 +1,54 @@
+[1/5] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Espressif/frameworks/enc28j60/build/partition_table/partition-table.bin D:/Espressif/frameworks/enc28j60/build/wifi_station.bin"
+wifi_station.bin binary size 0x723e0 bytes. Smallest app partition is 0x200000 bytes. 0x18dc20 bytes (78%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Espressif/frameworks/enc28j60/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D D:\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && D:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/Espressif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=D:/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;D:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/Espressif/frameworks/enc28j60/build -P D:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_serial_toolesptool.py --chip esp32 -p COM10 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 wifi_station.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM10
+Connecting..........
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: fc:e8:c0:74:4e:70
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00082fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16347...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16347 compressed) at 0x00001000 in 0.8 seconds (effective 260.0 kbit/s)...
+Hash of data verified.
+Compressed 467936 bytes to 263436...
+Writing at 0x00010000... (5 %)
+Writing at 0x0001457a... (11 %)
+Writing at 0x000223f5... (17 %)
+Writing at 0x0002f649... (23 %)
+Writing at 0x000352dc... (29 %)
+Writing at 0x0003b127... (35 %)
+Writing at 0x00041070... (41 %)
+Writing at 0x000467b5... (47 %)
+Writing at 0x0004c387... (52 %)
+Writing at 0x000520cf... (58 %)
+Writing at 0x00057ca9... (64 %)
+Writing at 0x0005e1a8... (70 %)
+Writing at 0x00064845... (76 %)
+Writing at 0x0006f2d8... (82 %)
+Writing at 0x000754e0... (88 %)
+Writing at 0x0007b2e3... (94 %)
+Writing at 0x00081b83... (100 %)
+Wrote 467936 bytes (263436 compressed) at 0x00010000 in 6.7 seconds (effective 556.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 88...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (88 compressed) at 0x00008000 in 0.1 seconds (effective 468.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+.cmake"

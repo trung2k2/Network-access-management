@@ -1,0 +1,38 @@
+[1/62] Linking C static library esp-idf\esp_ringbuf\libesp_ringbuf.a
+[2/62] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\Espressif\frameworks\enc28j60\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Espressif/frameworks/enc28j60/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[3/62] No install step for 'bootloader'
+[4/62] Linking C static library esp-idf\xtensa\libxtensa.a
+[5/62] Completed 'bootloader'
+[6/62] Linking C static library esp-idf\app_trace\libapp_trace.a
+[7/62] Linking C static library esp-idf\unity\libunity.a
+[8/62] Linking C static library esp-idf\console\libconsole.a
+[9/62] Linking C static library esp-idf\esp_hid\libesp_hid.a
+[10/62] Linking C static library esp-idf\esp_lcd\libesp_lcd.a
+[11/62] Linking C static library esp-idf\espcoredump\libespcoredump.a
+[12/62] Linking C static library esp-idf\wear_levelling\libwear_levelling.a
+[13/62] Linking C static library esp-idf\protobuf-c\libprotobuf-c.a
+[14/62] Linking C static library esp-idf\nvs_sec_provider\libnvs_sec_provider.a
+[15/62] Linking C static library esp-idf\sdmmc\libsdmmc.a
+[16/62] Linking C static library esp-idf\json\libjson.a
+[17/62] Linking C static library esp-idf\mqtt\libmqtt.a
+[18/62] Linking C static library esp-idf\input_iot\libinput_iot.a
+[19/62] Linking C static library esp-idf\perfmon\libperfmon.a
+[20/62] Linking C static library esp-idf\output_iot\liboutput_iot.a
+[21/62] Linking C static library esp-idf\eth_enc28j60\libeth_enc28j60.a
+[22/62] Linking C static library esp-idf\spiffs\libspiffs.a
+[23/62] Linking C static library esp-idf\cmock\libcmock.a
+[24/62] Linking C static library esp-idf\protocomm\libprotocomm.a
+[25/62] Linking C static library esp-idf\fatfs\libfatfs.a
+[26/62] Linking C static library esp-idf\esp_local_ctrl\libesp_local_ctrl.a
+[27/62] Linking C static library esp-idf\wifi_provisioning\libwifi_provisioning.a
+[28/62] Building C object esp-idf/blink_iot/CMakeFiles/__idf_blink_iot.dir/blink_iot.c.obj
+FAILED: esp-idf/blink_iot/CMakeFiles/__idf_blink_iot.dir/blink_iot.c.obj 
+ccache D:\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20230928\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.2.2-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -ID:/Espressif/frameworks/enc28j60/build/config -ID:/Espressif/frameworks/enc28j60/common/blink_iot -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/platform_include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/config/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/config/include/freertos -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/config/xtensa/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/esp_additions/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/include/soc -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/include/soc/esp32 -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/port/esp32/. -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/heap/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/log/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/soc/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/soc/esp32 -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/soc/esp32/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/hal/platform_port/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/hal/esp32/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/hal/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_rom/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_rom/include/esp32 -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_rom/esp32 -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_common/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/soc -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/include/private -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/esp32/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/deprecated_include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include/apps -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/include/apps/sntp -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/lwip/src/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/freertos/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/esp32xx/include -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/esp32xx/include/arch -ID:/Espressif/frameworks/esp-idf-v5.2.2/components/lwip/port/esp32xx/include/sys -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=D:/Espressif/frameworks/enc28j60=. -fmacro-prefix-map=D:/Espressif/frameworks/esp-idf-v5.2.2=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/blink_iot/CMakeFiles/__idf_blink_iot.dir/blink_iot.c.obj -MF esp-idf\blink_iot\CMakeFiles\__idf_blink_iot.dir\blink_iot.c.obj.d -o esp-idf/blink_iot/CMakeFiles/__idf_blink_iot.dir/blink_iot.c.obj -c D:/Espressif/frameworks/enc28j60/common/blink_iot/blink_iot.c
+D:/Espressif/frameworks/enc28j60/common/blink_iot/blink_iot.c:13:10: fatal error: driver/ledc.h: No such file or directory
+   13 | #include "driver/ledc.h"
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+[29/62] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+ninja: build stopped: subcommand failed.

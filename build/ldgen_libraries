@@ -63,6 +63,7 @@ D:/Espressif/frameworks/enc28j60/build/esp-idf/spiffs/libspiffs.a
 D:/Espressif/frameworks/enc28j60/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 D:/Espressif/frameworks/enc28j60/build/esp-idf/main/libmain.a
 D:/Espressif/frameworks/enc28j60/build/esp-idf/arp_iot/libarp_iot.a
+D:/Espressif/frameworks/enc28j60/build/esp-idf/blink_iot/libblink_iot.a
 D:/Espressif/frameworks/enc28j60/build/esp-idf/etharp_iot/libetharp_iot.a
 D:/Espressif/frameworks/enc28j60/build/esp-idf/http_server_iot/libhttp_server_iot.a
 D:/Espressif/frameworks/enc28j60/build/esp-idf/input_iot/libinput_iot.a

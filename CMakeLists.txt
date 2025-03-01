@@ -7,7 +7,6 @@ set(EXTRA_COMPONENT_DIRS ${CMAKE_CURRENT_LIST_DIR}/common) #set duong dan den co
 project(wifi_station)
 
 
-
 target_add_binary_data(${CMAKE_PROJECT_NAME}.elf "image/anhmau.jpeg" TEXT)
 target_add_binary_data(${CMAKE_PROJECT_NAME}.elf "image/anhmau2.jpeg" TEXT)
 target_add_binary_data(${CMAKE_PROJECT_NAME}.elf "html/index.html" TEXT)

@@ -1,0 +1,9 @@
+-- Component directory D:/Espressif/frameworks/esp-idf-v5.2.2/components/uart does not contain a CMakeLists.txt file. No component will be added
+-- Component directory D:/Espressif/frameworks/enc28j60/common/json does not contain a CMakeLists.txt file. No component will be added
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32
+-- Configuring incomplete, errors occurred!
+See also "D:/Espressif/frameworks/enc28j60/build/CMakeFiles/CMakeOutput.log".
+[0/1] Re-running CMake...
+FAILED: build.ninja 
+D:\Espressif\tools\cmake\3.24.0\bin\cmake.exe --regenerate-during-build -SD:\Espressif\frameworks\enc28j60 -BD:\Espressif\frameworks\enc28j60\build
